@@ -1,0 +1,28 @@
+---
+name: Review (Add project title)
+description: Enter the Issue title.
+title: '[Review]: '
+labels: [Review]
+projects: ["Add project"]
+assignees:
+- Add Project lead details
+body:
+  - type: textarea
+    id: expected
+    attributes:
+      label: Comment Submission
+      description: Outline in detail your observation
+      placeholder: Describe the expected state
+    validations:
+      required: true
+  - type: textarea
+    id: Company
+    attributes:
+      label: Company Submission
+      description: 
+      placeholder: Add your company name here
+  - type: markdown
+    attributes:
+      value: |
+        ### Definition of Done
+        - [ ] Add here

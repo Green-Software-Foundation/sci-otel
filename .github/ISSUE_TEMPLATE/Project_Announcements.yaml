@@ -1,0 +1,34 @@
+name:  Project Announcements
+description: Project Announcements
+title: "[Project Announcements]"
+labels: ["Project Announcements"]
+projects: ["Project Announcements"]
+assignees: add github username
+body:
+  - type: textarea
+    id: What
+    attributes:
+      label: What
+      description: Communication that introduces the launch of a new project or deliverable to the GSF.
+      placeholder: Add here
+      value: "Communication that introduces the launch of a new project or deliverable to the GSF."
+    validations:
+      required: true
+  - type: textarea
+    id: Why
+    attributes:
+      label: Why
+      description: Communication that introduces the launch of a new project or deliverable to the GSF.
+      placeholder: Add here
+      value: "Communicating the launch of a new project or deliverable to members fosters engagement, transparency, and trust while aligning members with the organization's goals. It also encourages collaboration, feedback, and resource utilization."
+    validations:
+      required: true
+  - type: textarea
+    id: How
+    attributes:
+      label: How
+      description: How
+      placeholder: Add here
+      value: "Create a Template on Notion? GitHub? for members to easily provide information. The platform should integrate the data provided in Notion, respectively, and trigger a notification to the Director of Operations."
+    validations:
+      required: true

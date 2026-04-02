@@ -1,0 +1,29 @@
+name:  Question
+description: Question Submission
+title: "[Question]"
+labels: ["question"]
+projects: ["Add project"]
+assignees: add github username
+body:
+  - type: textarea
+    id: Question
+    attributes:
+      label: Question
+      description: Question submission for group members
+      placeholder: Tell us what you see
+      value: "Question submission details"
+    validations:
+      required: true
+  - type: dropdown
+    id: Groups
+    attributes:
+      label: Issue dependency with other TF Groups
+      multiple: true
+      options:
+        - No Dependency
+        - Opensource
+        - Policy
+        - Community
+        - AI
+        - SCI
+        - Standards

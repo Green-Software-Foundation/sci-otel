@@ -1,0 +1,30 @@
+name:  Documentation
+description: Issues associated with documentation
+title: "[Docs]"
+labels: ["documentation"]
+projects: ["Add project"]
+assignees: 
+  - add github username
+body:
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: Outline Action Item Details
+      description: Outline Action Item Details
+      placeholder: Tell us what you see
+      value: "Add details"
+    validations:
+      required: true
+  - type: dropdown
+    id: TF-Groups
+    attributes:
+      label: Issue dependency with other TF Groups
+      multiple: true
+      options:
+        - No Dependency
+        - Opensource
+        - Policy
+        - Community
+        - AI
+        - SCI
+        - Standards
