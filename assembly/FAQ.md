@@ -1,6 +1,6 @@
 # Assembly FAQ
 
-Common questions about taking part in the SCI for OpenTelemetry Assembly. For the full picture, see the Participant Handout.
+Common questions about taking part in the SCI for OpenTelemetry Assembly. For the full picture, see the [Participant Handout](https://github.com/Green-Software-Foundation/sci-otel/blob/main/assembly/resources/participant-handbook.md).
 
 ## How the Assembly works
 
