@@ -30,7 +30,7 @@ OpenTelemetry's semantic conventions are the shared vocabulary that makes teleme
 
 The Assembly's task is to agree how each part of that formula should be represented in OpenTelemetry. The SCI methodology is fixed by the ISO standard; what is open is its representation, not its definition.
 
-## What participants are not being asked to decide
+### What participants are not being asked to decide
 
 - Whether SCI is the right formula.
 - Whether offsets should count.
@@ -43,17 +43,13 @@ The Assembly's task is to agree how each part of that formula should be represen
 
 ### If you know OpenTelemetry but not SCI
 
-Read: Overview → What participants are deciding → Track A → Track B recap.
+Read: Overview → Track A → Track B recap.
 
 ### If you know carbon or sustainability measurement but not OpenTelemetry
 
-Read: Overview → What participants are deciding → Track B → Track A recap.
+Read: Overview → Track B → Track A recap.
 
-### If you are reviewing quickly
-
-Read: Read this first → What participants are deciding → What participants are not being asked to decide → Fixed versus open summary.
-
-## Glossary preview
+## Glossary
 
 | Term | Plain-English meaning |
 | --- | --- |
@@ -93,13 +89,6 @@ The specification defines five steps:
 3. **Define:** decide the quantification method for each component in the boundary.
 4. **Quantify:** calculate a rate for every component; the whole application SCI is the sum of the component SCI values.
 5. **Report:** disclose the SCI score, software boundary and calculation methodology.
-
-<aside>
-✅
-
-**Must know:** SCI is an efficiency metric. It asks how much carbon is emitted per unit of useful work.
-
-</aside>
 
 ### What each formula component means
 
