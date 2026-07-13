@@ -1,45 +1,134 @@
 # Assembly Participant Handbook
 
-Welcome. You have been confirmed as a participant in the SCI for OpenTelemetry Assembly. This is the one document to keep. Everything you need to take part lives here, so when a question comes up later you look it up rather than wait for a reply.
+Welcome. You have been confirmed as a participant in the SCI for OpenTelemetry Assembly.
+
+Everything you need to take part lives here. If a question comes up later, check this page first.
+
+> [!IMPORTANT]
+> **In short**
+>
+> - You will take part by replying to structured emails.
+> - Each section has three phases: **Discover, Deliberate, Decide**.
+> - Most active weeks need **30 to 45 minutes**.
+> - **Discover responses are private.**
+> - **Your Discover response is required** if you want to take part in that section’s Deliberate and Decide rounds.
+> - **Decide rounds are binding.** If you do not reply before the deadline, we record that as consent.
+> - If you object, say what would need to change.
+> - Keep this page as your reference.
+
+## What you need to do
+
+1. **Read this handbook once.**
+
+   Use it to understand the process, expectations, and key rules.
+
+2. **Join an orientation call if you can.**
+
+   Two time-zone slots will be offered. Attend whichever suits you.
+
+3. **Reply to the Assembly emails inside each response window.**
+
+   You do not need to answer everything, but a reliable reply each round keeps the work moving.
+
+4. **Take clear positions.**
+
+   Your disagreement is useful. If something is wrong, say where the line should be drawn and why.
+
+5. **Watch the deadlines.**
+
+   Deadlines run to the end of the day in the last time zone on Earth, so everyone gets their full day.
+
+## What happens next
+
+1. You receive the orientation invite.
+2. You receive the first Discover email.
+3. You reply before the deadline.
+4. We send a synthesis showing what changed because of the group’s input.
+5. The section moves to Deliberate, then Decide.
+6. Once a section closes, the next one begins.
 
 ## Project and Assembly overview
 
-Start here. This gives you the whole picture: who is convening this, what an Assembly is, what we are building and why it matters, and what taking part involves. Everything after it is reference you can return to.
+Start here for the whole picture: who is convening this, what an Assembly is, what we are building, why it matters, and what taking part involves.
 
 ### Who is convening this
 
-The Green Software Foundation (GSF) is a non-profit consortium of more than 60 organisations, spanning companies, universities and non-profits, working towards a future where software has no harmful environmental impact. We pursue that by building standards, tooling and best practices through the consensus of our members and the wider community. This Assembly is a GSF initiative.
+The Green Software Foundation (GSF) is a non-profit consortium of more than 60 organisations, spanning companies, universities and non-profits, working towards a future where software has no harmful environmental impact.
+
+We pursue that by building standards, tooling and best practices through the consensus of our members and the wider community. This Assembly is a GSF initiative.
 
 ### What an Assembly is
 
-An Assembly is how the GSF brings a focused group of experts to a clear, documented agreement on a specific question. It runs entirely by email, over a fixed period, in structured rounds, and it is designed so that a real consensus emerges from written deliberation rather than from whoever is loudest or most available. There is nothing to install and no standing meeting to attend. You reply to emails, on your own schedule, inside each round's window. Running this way is also a deliberate choice for a foundation focused on software's environmental impact: asynchronous email deliberation avoids the travel and repeated video calls a group this size would otherwise need.
+An Assembly is a structured way for GSF to help experts reach documented agreement on a specific question.
+
+It is:
+
+- **Focused:** one defined question at a time.
+- **Asynchronous:** everything runs by email.
+- **Time-bound:** each round has a clear deadline.
+- **Consensus-led:** the aim is agreement the group can stand behind.
+- **Written-first:** decisions emerge from documented reasoning, not from whoever is loudest or most available.
+
+There is nothing to install and no recurring meeting to attend. You reply to emails on your own schedule, within each round’s response window.
+
+Running this way is also a deliberate choice for a foundation focused on software’s environmental impact. Asynchronous email deliberation avoids the travel and repeated video calls a group this size would otherwise need.
 
 ### What we are working on, and why it matters
 
 Two worlds are meeting here.
 
-Software has a carbon footprint. The Software Carbon Intensity (SCI) specification, published as an international standard (ISO/IEC 21031:2024), gives a consistent way to measure it: a rate of carbon emissions per unit of useful work, expressed as **SCI = (E x I + M) / R**.
+Software has a carbon footprint. The Software Carbon Intensity (SCI) specification, published as an international standard (ISO/IEC 21031:2024), gives a consistent way to measure it:
 
-OpenTelemetry (OTel) is the open standard the software industry uses to observe how systems behave, the traces, metrics and logs that almost every modern platform emits. Its **semantic conventions** are the shared vocabulary that makes all that telemetry mean the same thing everywhere.
+**SCI = (E x I + M) / R**
 
-Today there is no agreed way to express carbon intensity as native OpenTelemetry telemetry. If there were, carbon could be measured and reported with the same tools teams already use for performance and reliability, instead of being bolted on afterwards. Closing that gap is what this Assembly exists to do.
+OpenTelemetry (OTel) is the open standard the software industry uses to observe how systems behave: the traces, metrics and logs that almost every modern platform emits. Its **semantic conventions** are the shared vocabulary that makes all that telemetry mean the same thing everywhere.
+
+Today there is no agreed way to express carbon intensity as native OpenTelemetry telemetry. If there were, carbon could be measured and reported with the same tools teams already use for performance and reliability, instead of being bolted on afterwards.
+
+Closing that gap is what this Assembly exists to do.
 
 ### Why you, and who else is here
 
-You are one of around 40 practitioners drawn from both communities: people who build and maintain OpenTelemetry, and people who work in software sustainability and carbon measurement. The mix is deliberate. Neither community can answer this alone, and the entire point is to agree something both can stand behind. You are here because your expertise is needed in at least part of this work.
+You are one of around 40 practitioners drawn from both communities:
+
+- People who build and maintain OpenTelemetry.
+- People who work in software sustainability and carbon measurement.
+
+The mix is deliberate. Neither community can answer this alone, and the point is to agree something both can stand behind.
+
+The process is structured so that each person’s input is captured without requiring everyone to respond to everyone else. You are here because your expertise is needed in at least part of this work.
 
 ### What we will produce, and where it goes
 
-We will produce a blueprint: an agreed design document setting out how SCI should be represented in OpenTelemetry, capturing the design decisions in enough detail that the formal conventions can be written from it directly. The blueprint is then rendered into draft semantic conventions, which you will be invited to review for fidelity before submission, and the GSF carries them to the OpenTelemetry Semantic Conventions SIG, the group that governs these conventions, as the community's proposed design.
+We will produce a **blueprint**: an agreed design document setting out how SCI should be represented in OpenTelemetry.
+
+The blueprint will capture the design decisions in enough detail that formal conventions can be written from it directly. It will then be rendered into draft semantic conventions, which you will be invited to review for fidelity before submission.
+
+GSF will carry those draft conventions to the OpenTelemetry Semantic Conventions SIG, the group that governs these conventions, as the community’s proposed design.
 
 ### What taking part involves, in one glance
 
-- About **30 to 45 minutes of your time in an active week.**
-- **Everything by email**, answered in your own time within each window.
+- About **30 to 45 minutes of your time in an active week**.
+- **Everything by email**, answered in your own time within each response window.
 - **A series of sections**, each tracing one part of the SCI formula, run one at a time.
-- **An orientation call** to open, offered in two time-zone slots (attend whichever suits), then a handful of informal drop-ins.
+- **An orientation call** to open, offered in two time-zone slots.
+- **A handful of informal drop-ins**, which are optional and not used for decision-making.
 
-The rest of this document explains each of these in detail. Read on when you need it.
+> [!WARNING]
+> **Two rules not to miss**
+>
+> - **Discover is required:** if you do not take part in Discover, you cannot take part in Deliberate or Decide for that section.
+> - **Silence is consent:** if you do not respond within a Decide window, we record that as consent.
+
+## Time commitment
+
+Plan for **30 to 45 minutes in an active week**, though some weeks are lighter. We would rather give you an honest estimate now than have the workload surprise you later.
+
+| Phase | What you do | Typical time |
+|---|---|---|
+| Discover | Answer open questions privately | 20–30 min |
+| Deliberate | Rate and comment on candidate positions | 30–45 min |
+| Decide | Endorse, consent, or object | 10–20 min |
 
 ## What we ask of you, and what you can expect from us
 
@@ -47,27 +136,40 @@ This Assembly works because a small group of people each do a small amount, reli
 
 ### What we ask of you
 
-- **Bring your expertise, and your disagreement.** You are here as an expert. The most valuable thing you can do is take a clear position and say where you would draw a line, especially when it differs from the group. We would rather have your sharp disagreement than your polite agreement.
+- **Bring your expertise, and your disagreement.** You are here as an expert. The most valuable thing you can do is take a clear position and say where you would draw a line, especially when it differs from the group.
 - **Stay open past your own domain.** Nobody here spans the whole problem. Contribute where you are strong, and stay genuinely open where someone else is stronger.
-- **Respond within the window.** You do not need to answer everything, but a reliable reply each round is what keeps the process moving for everyone. Roughly 30 to 45 minutes in an active week.
-- **Disagree constructively.** When you object, say what would need to change, ideally with alternative wording. A flat "no" without a route forward stalls the group; a well-argued objection moves it.
-- **Respect the phases.** When a section is open for exploration, explore. When it moves to a decision, decide. Once it closes, it stays closed. Reopening settled ground is the one thing that can unravel the work.
+- **Respond within the window.** You do not need to answer everything, but a reliable reply each round keeps the process moving for everyone.
+- **Disagree constructively.** When you object, say what would need to change, ideally with alternative wording. A flat “no” without a route forward stalls the group; a well-argued objection moves it.
+- **Respect the phases.** When a section is open for exploration, explore. When it moves to a decision, decide. Once it closes, it stays closed. Reopening settled ground can unravel the work.
 
 ### What you can expect from us
 
-- **Your voice carries equal weight.** Every participant has equal standing, regardless of seniority, organisation or how loudly anyone else writes. The process is built so the quietest, best-argued point can win.
-- **Nothing you say is wasted.** Every response is acknowledged, and every synthesis opens by showing what changed because of the group's input. You will see your fingerprint on the outcome.
-- **A predictable rhythm.** Clear windows, Anywhere on Earth deadlines, synthesis after each round closes, and a reminder before anything is due. No surprises about what is expected or when.
-- **Genuine neutrality.** The facilitator runs the process and never takes a side on the substance. The decisions are yours; the facilitation only ensures everyone gets a fair hearing and no one gets deadlocked.
-- **Your candour protected.** Discover responses are private, and nothing is ever published outside the Assembly with your name against it. What is shared within the group stays within the group unless we all agree otherwise, which is what makes honest input safe.
+- **Your voice carries equal weight.** Every participant has equal standing, regardless of seniority, organisation or how loudly anyone else writes.
+- **Nothing you say is wasted.** Every response is acknowledged, and every synthesis opens by showing what changed because of the group’s input.
+- **A predictable rhythm.** Clear windows, Anywhere on Earth deadlines, synthesis after each round closes, and a reminder before anything is due.
+- **Genuine neutrality.** The facilitator runs the process and never takes a side on the substance. The decisions are yours; the facilitation ensures everyone gets a fair hearing and no one gets deadlocked.
+- **Your candour protected.** Discover responses are private, and nothing is ever published outside the Assembly with your name against it. What is shared within the group stays within the group unless we all agree otherwise.
 
 ### What consensus means here, and what it does not
 
-A section is done when the group has settled every open decision within it and no objections remain unresolved. Consensus does not mean everyone is happy, and it is not a check on whether the conventions will turn out accurate or complete; that is not something a group agreement can promise. What it does guarantee is that every design decision this Assembly is responsible for has been made and agreed, so the work can move forward. We deliberately look for the position the least satisfied person can still accept, rather than one that pleases the majority while quietly leaving someone behind.
+A section is done when the group has settled every open decision within it and no objections remain unresolved.
+
+Consensus does not mean everyone is happy. It is not a guarantee that the conventions will turn out accurate or complete. Group agreement cannot promise that.
+
+What consensus does guarantee is that every design decision this Assembly is responsible for has been made and agreed, so the work can move forward.
+
+We deliberately look for the position the least satisfied person can still accept, rather than one that pleases the majority while quietly leaving someone behind.
 
 ### What we need from you: clear positions, especially where you disagree
 
-This is boundary-drawing work. What is in scope and what is out. Which existing OpenTelemetry conventions we reuse and which we do not. Where operational emissions end and embodied carbon begins. Every question we send is trying to locate a line the group can agree on.
+This is boundary-drawing work:
+
+- What is in scope and what is out.
+- Which existing OpenTelemetry conventions we reuse and which we do not.
+- Where operational emissions end and embodied carbon begins.
+- How units, provenance, allocation, and computation should be represented.
+
+Every question we send is trying to locate a line the group can agree on.
 
 The most useful thing you can do is take a clear position and explain where you would draw the line and why, above all when you disagree with others. Disagreement is not friction to be smoothed over; it is the signal that shows us where the real boundary sits.
 
@@ -81,9 +183,9 @@ Our task is to take that formula apart and agree how each component, E, I, M and
 
 ### The shape of the work
 
-The Assembly is organised into a series of sections. Each runs in order, closes fully before the next opens, and does not reopen. Together they trace the SCI formula from end to end.
+The Assembly is organised into a series of sections. Each runs in order, closes fully before the next opens, and does not reopen.
 
-The exact number of sections and how they are grouped is being finalised, but the territory is fixed by the formula. Expect the work to move through:
+The final grouping of sections will be confirmed before the Assembly begins. The territory is fixed by the SCI formula, and the work will move through these areas:
 
 - **Scope and use cases** – who the telemetry serves, what decisions it enables, what is explicitly out of scope.
 - **Namespace and reuse** – where the conventions live, what we reuse from existing OpenTelemetry conventions, and how we express units.
@@ -93,21 +195,44 @@ The exact number of sections and how they are grouped is being finalised, but th
 
 ### How a section works
 
-A section moves through three phases, always in this order: Discover, then Deliberate, then Decide. Each phase is one kind of email, asking for one thing, with the time cost and the deadline stated at the top. You reply above the line. There are no portals and nothing to install.
+A section moves through three phases, always in this order:
 
-<img width="1921" height="1081" alt="618285119-dc37a9f6-cc5b-46c8-a874-2ae0f23b6aa9" src="https://github.com/user-attachments/assets/18359b8e-8b5d-4c7b-9fc9-ef3d37fa4dde" />
+1. **Discover:** private input on open questions.
+2. **Deliberate:** visible discussion of candidate positions.
+3. **Decide:** final verdict on one proposed position.
+
+Each phase is one kind of email, asking for one thing, with the time cost and the deadline stated at the top. You reply above the line. There are no portals and nothing to install.
+
+![Assembly process](https://private-user-images.githubusercontent.com/69306070/618285119-dc37a9f6-cc5b-46c8-a874-2ae0f23b6aa9.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODM5NTQ0MzQsIm5iZiI6MTc4Mzk1NDEzNCwicGF0aCI6Ii82OTMwNjA3MC82MTgyODUxMTktZGMzN2E5ZjYtY2M1Yi00NmM4LWE4NzQtMmFlMGYyM2I2YWE5LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjA3MTMlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYwNzEzVDE0NDg1NFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTliOTU0YjAzMTIwZmI2N2ViYTMzZWNlOGIzZWJjNDUzZDMwZjIxYmQyNmYyMzg4YjcwYzY4MmY1OWRhZjFhOTAmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JnJlc3BvbnNlLWNvbnRlbnQtdHlwZT1pbWFnZSUyRnBuZyJ9.5RMCocBpEx0KVsnGFuRII5L1T4WRgQglOa0GFulOvEI)
+
+*Each section follows the same pattern: private input, visible deliberation, then a final decision.*
 
 ### Discover: open the questions
 
-You receive a small set of open questions and reply free-form, in as much depth as you like. There is no template. This is where you open the space, so long, unpolished, thinking-out-loud answers are exactly what we want; short answers are the thing to avoid. Each round pairs its core questions with an optional deeper technical one, so you can go as far as your expertise takes you. Your Discover responses are private: only an anonymised synthesis is ever shared back, never your raw words with your name against them. That privacy is deliberate, because it lets you be candid and keeps quieter voices from being drowned out by louder ones.
+You receive a small set of open questions and reply free-form, in as much depth as you like. There is no template.
+
+This is where you open the space. Long, unpolished, thinking-out-loud answers are welcome. Short answers are less useful.
+
+Each round pairs its core questions with an optional deeper technical one, so you can go as far as your expertise takes you.
+
+Your Discover responses are private:
+
+- Only an anonymised synthesis is ever shared back.
+- Your raw words are never shared with your name against them.
+- Privacy is deliberate because it lets you be candid and keeps quieter voices from being drowned out.
 
 A practical tip: dictate your Discover responses. Speech-to-text captures rich reasoning far better than typing tends to, and there is no need to tidy it up on our account.
 
-**Your Discover response is your entry ticket for the section.** If you do not take part in Discover, you cannot take part in Deliberate or Decide for that section; you rejoin at the next section. This protects everyone who put the work in from a last-minute block by someone who did not.
+> [!IMPORTANT]
+> **Your Discover response is your entry ticket.** If you do not take part in Discover, you cannot take part in Deliberate or Decide for that section. You rejoin at the next section. This protects everyone who put the work in from a last-minute block by someone who did not.
 
 ### Deliberate: react to the candidates
 
-Deliberate is the one phase that is a visible conversation: you will see who said what and respond to one another directly in the thread, because that is where real deliberation happens. You receive three candidate positions, and you rate each one from 0 to 10 and comment on each. Ratings use shared anchors, so that a 5 means the same thing in Santiago as it does in Tokyo:
+Deliberate is the one phase that is a visible conversation. You will see who said what and respond to one another directly in the thread, because that is where real deliberation happens.
+
+You receive three candidate positions. You rate each one from 0 to 10 and comment on each.
+
+Ratings use shared anchors, so that a 5 means the same thing in Santiago as it does in Tokyo:
 
 - **0** – you would fundamentally object to this.
 - **5** – you could probably accept it. It would likely survive a Decide vote.
@@ -119,32 +244,46 @@ You receive one proposed position and give one of three verdicts:
 
 - **Endorse** – you actively support this. No text needed, though it is welcome.
 - **Consent** – you can live with this. No text needed.
-- **Object** – this cannot go forward as written. An objection must say specifically what would need to change, ideally with proposed wording. Objecting commits you to helping resolve it.
+- **Object** – this cannot go forward as written. An objection must say specifically what would need to change, ideally with proposed wording.
 
-**Silence is consent.** If you do not respond within a Decide window, you are recorded as consenting. There is no abstention and there is no later round to catch it. If something is wrong, you must object now.
+> [!WARNING]
+> **Decide rounds are binding.** If you do not respond within a Decide window, we record that as consent. There is no abstention and there is no later round to catch it. If something is wrong, you must object now.
 
-**If someone objects,** it is normal mechanics, not conflict:
+If you object, you commit to helping resolve the objection.
 
-- The objection triggers discussion and a revised candidate that takes on the proposed change where one was given, followed by a further Decide round. There are at most three rounds.
-- If it is still unresolved after a revision round, it goes to a live resolution session in the next standing slot, with advance notice. Attendance is required for the objector and for someone representing the endorsing position, and optional for everyone else. These sessions are recorded, because they are part of the decision record.
-- If objections still persist after three rounds, the outcome is chosen by a published fallback rule over all the votes cast. No single person can stall a section indefinitely.
+### If someone objects
+
+An objection is normal mechanics, not conflict.
+
+If someone objects:
+
+1. The objection triggers discussion.
+2. A revised candidate is produced.
+3. The revised candidate goes to a further Decide round.
+4. There are at most three Decide rounds.
+5. If the objection remains unresolved, it goes to a live resolution session in the next standing slot.
+
+Attendance at a live resolution session is required for the objector and for someone representing the endorsing position. It is optional for everyone else.
+
+These sessions are recorded because they are part of the decision record.
+
+If objections still persist after three rounds, the outcome is chosen by a published fallback rule over all the votes cast. No single person can stall a section indefinitely.
 
 ### The rhythm you can rely on
 
-- Each round has a response window with a clear deadline. Window lengths vary by phase, and a window is sometimes extended so everyone gets a fair chance to respond.
-- Deadlines run to the end of the day in the last time zone on Earth, so wherever you are you get the full day. A synthesis follows once the round closes, so you always know when the next thing is coming.
-- Every response is acknowledged, even briefly. You will not send something into silence.
+- Each round has a response window with a clear deadline.
+- Window lengths vary by phase.
+- A window is sometimes extended so everyone gets a fair chance to respond.
+- Deadlines run to the end of the day in the last time zone on Earth.
+- A synthesis follows once the round closes.
+- Every response is acknowledged, even briefly.
 - You get a reminder before a deadline.
 
 ### What you get back each round
 
-- **What changed because of your responses**, opening every synthesis with the anonymised reasoning that actually shifted a candidate.
+- **What changed because of your responses:** the anonymised reasoning that actually shifted a candidate.
 - **Insight of the round:** one anonymised quote that taught the group something.
 - **What surprised us:** one line on where responses diverged from what anyone expected.
-
-### Time commitment
-
-Plan for **30 to 45 minutes in an active week**, though some weeks are lighter. We would rather give you an honest estimate now than have the workload surprise you later.
 
 ## Staying connected: drop-ins
 
@@ -152,7 +291,9 @@ Three optional drop-in calls run across the Assembly. These are for connection, 
 
 - 45 minutes, cameras encouraged, no agenda, no minutes, **no recording**.
 - Two rotating time slots so no hemisphere always gets the worst one.
-- **We do not discuss active candidates on these calls.** Substance stays in the written process so that nobody who missed the call loses influence, and so the record stays complete. Anything substantive is a Discover question, and we will say so on the call.
+- **We do not discuss active candidates on these calls.**
+
+Substance stays in the written process so that nobody who missed the call loses influence, and so the record stays complete. Anything substantive is a Discover question, and we will say so on the call.
 
 ## Recognition
 
@@ -160,11 +301,25 @@ Three optional drop-in calls run across the Assembly. These are for connection, 
 - **A closing showcase** when the report publishes: an optional celebration where participants can present a section they helped settle.
 - **A review before submission.** Once the blueprint is rendered into draft conventions, you will be invited to review them to confirm they faithfully reflect what the group agreed, before they go to the SIG.
 
+## Useful terms
+
+- **Assembly:** a structured, time-bound process for experts to reach documented agreement.
+- **Blueprint:** the agreed design document this Assembly will produce.
+- **Semantic conventions:** the OpenTelemetry naming and structure rules that make telemetry consistent.
+- **SIG:** the OpenTelemetry group that governs semantic conventions.
+- **Operational emissions:** emissions associated with running software systems.
+- **Embodied carbon:** emissions associated with producing and allocating the hardware used by software systems.
+- **Functional unit:** the “per unit of useful work” part of the SCI formula.
+- **Candidate position:** a possible answer to a design question, written for the group to assess.
+- **Fallback rule:** the published rule used to choose an outcome if objections remain unresolved after the allowed rounds.
+
+For further definitions review the [Glossary](https://github.com/Green-Software-Foundation/sci-otel/blob/main/assembly/GLOSSARY.md).
+
 ## FAQ
 
-Common questions are answered on the dedicated Frequently Asked Questions page.
+Common questions are answered on the dedicated [Frequently Asked Questions](https://github.com/Green-Software-Foundation/sci-otel/blob/main/assembly/FAQ.md) page.
 
 ## Contacts
 
-- **Project Lead:** Sarah Hsu, Site Reliability Engineer 🔗
-- **Facilitator:** Russ Trow, Operations Director, Green Software Foundation ✉️
+- **Project Lead:** Sarah Hsu, Site Reliability Engineer [🔗](https://www.linkedin.com/in/greenhsu123/)
+- **Facilitator:** Russ Trow, Operations Director, Green Software Foundation [✉️](mailto:russell@greensoftware.foundation)
