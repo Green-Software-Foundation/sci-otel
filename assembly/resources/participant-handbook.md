@@ -95,6 +95,8 @@ The exact number of sections and how they are grouped is being finalised, but th
 
 A section moves through three phases, always in this order: Discover, then Deliberate, then Decide. Each phase is one kind of email, asking for one thing, with the time cost and the deadline stated at the top. You reply above the line. There are no portals and nothing to install.
 
+<img width="1921" height="1081" alt="618285119-dc37a9f6-cc5b-46c8-a874-2ae0f23b6aa9" src="https://github.com/user-attachments/assets/18359b8e-8b5d-4c7b-9fc9-ef3d37fa4dde" />
+
 ### Discover: open the questions
 
 You receive a small set of open questions and reply free-form, in as much depth as you like. There is no template. This is where you open the space, so long, unpolished, thinking-out-loud answers are exactly what we want; short answers are the thing to avoid. Each round pairs its core questions with an optional deeper technical one, so you can go as far as your expertise takes you. Your Discover responses are private: only an anonymised synthesis is ever shared back, never your raw words with your name against them. That privacy is deliberate, because it lets you be candid and keeps quieter voices from being drowned out by louder ones.
