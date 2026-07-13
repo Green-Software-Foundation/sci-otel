@@ -1,20 +1,22 @@
 # Assembly Research Note
 
+## Overview
+
+The Software Carbon Intensity (SCI) specification, ISO/IEC 21031:2024, measures software carbon as a rate of emissions per unit of useful work:
+
+**SCI = (E x I + M) / R**
+
+where **E** is the energy the software uses, **I** the carbon intensity of the grid supplying it, **M** the embodied carbon of the hardware, and **R** the unit of useful work the score is expressed per.
+
+OpenTelemetry's semantic conventions are the shared vocabulary that makes telemetry mean the same thing everywhere. Today there is no agreed way to express SCI as native OpenTelemetry telemetry.
+
+The Assembly's task is to agree how each part of that formula should be represented in OpenTelemetry. The SCI methodology is fixed by the ISO standard; what is open is its representation, not its definition. Track A explains the specification in full for readers coming to it fresh.
+
 ## How to read this note
 
-All participants read the Shared Spine:
+All participants read the shared background. Read Track A if your background is OpenTelemetry rather than carbon measurement; read Track B if your background is carbon or sustainability measurement rather than OpenTelemetry. Read both where applicable. This note is reference material and is not part of the deliberation.
 
-* Read Track A if your background is OpenTelemetry rather than carbon measurement;
-* Read Track B if your background is carbon or sustainability measurement rather than OpenTelemetry.
-* Read both where applicable.
-
-This note is reference material and is not part of the deliberation.
-
-## Shared Spine
-
-### Source standard
-
-Software Carbon Intensity is published as an international standard, ISO/IEC 21031:2024. The standard is fixed. The Assembly decides how to represent SCI in OpenTelemetry, not whether to alter the definition or calculation of SCI. Track A summarises the standard itself.
+## Shared background
 
 ### From this Assembly to OpenTelemetry: the three steps
 
@@ -22,51 +24,28 @@ The work produces three distinct documents, each with a different owner, audienc
 
 - **Step 1, the blueprint (this Assembly).** The agreed design: scope, namespace, signal decisions, composition model, in consensus prose, with the vote record and known-unknowns. Authored collectively by the Assembly and published to GSF membership. The only artefact participants directly author.
 - **Step 2, the draft conventions (after the Assembly).** Once the blueprint is agreed, it is rendered into formal semantic conventions: definitions, registry entries and normative documentation. Participants do not draft this line by line, but they review the rendering before it is submitted, to confirm it stays faithful to what the Assembly agreed. It is then carried to the OpenTelemetry Semantic Conventions SIG.
-- **Step 3, the OpenTelemetry conventions (the SIG's process).** The conventions that exist in OpenTelemetry after SIG review and revision through OpenTelemetry governance, hosted under the federated model at `development` stability. Owned by the OpenTelemetry community. The Assembly influences this step; it does not control it.
+- **Step 3, the OpenTelemetry conventions (the SIG's process).** The conventions that exist in OpenTelemetry after SIG review and revision through OpenTelemetry governance, hosted in the OpenTelemetry organisation at `development` stability. Owned by the OpenTelemetry community. The Assembly influences this step; it does not control it.
 
 Two points follow. The Assembly does not bypass OpenTelemetry governance: Step 3 runs through the SIG's own process, and consensus in the Assembly does not pre-empt consensus at the SIG. And participation does not end with the blueprint: participants agree direction in Step 1 and review the draft conventions in Step 2 before submission. Detailed wording is settled at Steps 2 and 3, so the blueprint records decisions and direction rather than final phrasing.
 
 ### Prior-art register
 
-Two categories of prior art are referenced in the questions.
+The work does not start from nothing. The table lists the OpenTelemetry conventions it builds on, alongside the implementations and institutional direction that show the approach is feasible and supported.
 
-**Existing OpenTelemetry conventions to build on.** OpenTelemetry's hardware conventions, currently at `development` stability, define component energy and power: `hw.energy` (a Counter, in joules) and `hw.power` (a Gauge, in watts), with `hw.host.energy` and `hw.host.power` for the whole physical host. The conventions recommend reporting energy in preference to power. Component identity is carried on `hw.*` attributes such as `hw.id` and `hw.type`, and host identity on resource attributes, not on the metrics themselves. Sentry Software was a principal contributor to this work. These sit alongside the `system.*`, `k8s.*`, `container.*` and `cloud.region` conventions. Reuse of existing conventions is an OpenTelemetry acceptance criterion.
+| Prior art | What it is | Why it matters here |
+| --- | --- | --- |
+| OpenTelemetry hardware conventions | Energy and power metrics (`hw.energy`, `hw.power`, and host-level `hw.host.energy` and `hw.host.power`) in joules and watts, at `development` stability. A principal contribution from Sentry Software. | The reuse-first anchor for E: energy already has a home in OpenTelemetry. |
+| OpenTelemetry system, Kubernetes, container and cloud conventions | Mature conventions for compute, orchestration and cloud location (`system.*`, `k8s.*`, `container.*`, `cloud.region`). | Existing signals the blueprint builds on rather than duplicates. |
+| Kepler | eBPF-based energy attribution for Kubernetes workloads. | Workload-level energy is collectable in production. |
+| Aether (re-cinq) | An OpenTelemetry exporter that calculates the carbon emissions of cloud infrastructure. | Carbon can be exported through OpenTelemetry today. |
+| RETIT, with UAS Munich | A direct SCI calculation over OpenTelemetry, presented at the GSF Global Summit 2024. | The full SCI pipeline, including the functional unit R, is achievable. |
+| GSF Real-Time Cloud | A GSF project that concluded cloud carbon metrics should be defined as OpenTelemetry semantic conventions. | Independent institutional direction toward this approach. |
 
-**Existing implementations.** Software energy and carbon are measured in production by several projects, ordered here from narrowest to broadest scope. Kepler attributes energy consumption to Kubernetes workloads. Aether (by re-cinq) is an OpenTelemetry exporter that calculates the carbon emissions of cloud infrastructure. RETIT, with the University of Applied Sciences Munich and presented at the GSF Global Summit 2024, demonstrated a direct SCI calculation over OpenTelemetry, capturing both the functional unit (R) and the resource demands of a transaction. Each demonstrates a different segment of the pipeline is feasible.
-
-**Prior institutional direction.** The GSF Real-Time Cloud project independently concluded that carbon metrics for cloud providers should be defined as OpenTelemetry semantic conventions, noting OpenTelemetry's support across AWS, Azure and GCP. The direction this Assembly takes is not a lone bet.
-
-**Scope of prior art in the deliberation.** Prior art is reference evidence only and confers no standing in the deliberation. Candidates are framed in terms of what a backend must be able to compute, not in terms of what any specific tool emits.
+Prior art is reference evidence only and confers no standing in the deliberation. Candidates are framed in terms of what a backend must be able to compute, not what any specific tool emits.
 
 ### Glossary
 
-Terms are grouped by originating domain.
-
-**From the SCI world**
-
-- **SCI:** Software Carbon Intensity, a rate of carbon emissions per unit of useful work, defined by the formula **SCI = (E x I + M) / R**.
-- **E, energy:** the energy consumed by the software, in kilowatt-hours.
-- **I, carbon intensity:** the carbon emitted per unit of energy for a given location and time, in grams of CO2-equivalent per kilowatt-hour.
-- **M, embodied carbon:** the emissions from manufacturing and disposing of the hardware the software runs on, apportioned to the software.
-- **R, functional unit:** the unit of useful work the score is expressed per, for example per user, per API call, or per transaction. R is what turns a total into a rate.
-- **gCO2e:** grams of carbon-dioxide equivalent, the common unit for expressing a quantity of emissions.
-- **Operational versus embodied:** operational emissions come from running the software (E and I); embodied emissions come from the hardware existing at all (M).
-
-**From the OpenTelemetry world**
-
-- **OpenTelemetry (OTel):** the open standard for telemetry, the traces, metrics, logs and related signals that systems emit.
-- **Semantic conventions (semconv):** the shared definitions that make a piece of telemetry mean the same thing everywhere.
-- **Signal:** a kind of telemetry. The taxonomy is spans, metrics, events, resources and profiles.
-- **Attribute:** a key-value pair attached to a signal, for example `cloud.region`.
-- **Metric and instrument:** a measured value over time; the instrument is how it is recorded (counter, gauge, histogram).
-- **Span:** a timed operation within a trace. **Event:** a point-in-time occurrence. **Resource / entity:** the thing producing the telemetry, and its identity.
-- **Namespace:** the naming home for a group of conventions, for example `hw.*`.
-- **Requirement level:** how strongly an attribute is expected, one of Required, Recommended, or Opt-In.
-- **Stability level:** how settled a convention is; new conventions start at `development`.
-- **Cardinality:** how many distinct values an attribute can take; high-cardinality attributes are constrained to Opt-In.
-- **UCUM:** the unit code system OpenTelemetry uses for metric units. Relevant because gCO2e is not a UCUM unit, which is a decision the Assembly must make.
-- **Registry, codeowners, SIG:** the catalogue an attribute is registered in; the people responsible for a convention; and the Special Interest Group that governs semantic conventions.
-- **Instrumentation:** the code that actually emits the telemetry.
+The terms used across this note, from both the SCI and OpenTelemetry worlds, are defined in the companion Glossary, which is the single source of truth for definitions.
 
 ## Track A: The SCI specification, for the OpenTelemetry reader
 
@@ -98,4 +77,26 @@ Three carbon or energy quantities (E, I, M) over one unit of work (R).
 
 ## Track B: The OpenTelemetry landscape, for the sustainability reader
 
-*In preparation.*
+Track B summarises how OpenTelemetry represents things, for readers whose background is carbon or sustainability measurement rather than OpenTelemetry. Reference material, not a deliberation input. It assumes the companion Glossary.
+
+**Signals: the shapes telemetry can take.** OpenTelemetry defines a fixed set of signal types, and every convention chooses among them: metrics (numeric measurements over time), spans (timed operations within a trace), events (point-in-time occurrences), resources (the entity producing the telemetry) and profiles (code-level sampling). Carbon telemetry plausibly touches three: metrics for energy and carbon quantities, resources for the boundary the numbers belong to, and possibly events for a completed SCI calculation with its inputs. Which signal each SCI component becomes is a section decision, not a given.
+
+**Metrics and instruments.** Most SCI components are numeric, so metrics are central. A metric is recorded through an instrument, and the instrument type carries meaning: a Counter accumulates a value that only rises (cumulative energy in joules), a Gauge reports an instantaneous value (power in watts), and a Histogram records a distribution. The choice is not cosmetic; it determines how a backend aggregates the data. The same choice recurs for every SCI quantity.
+
+**Resources and entities: where a value belongs.** A metric is a number; a resource says what the number is about (a host, a container, a Kubernetes pod, a cloud region). OpenTelemetry formalises this through its entity model. It matters directly to SCI because embodied carbon (M) and the software boundary are properties of a thing, not events in a stream. Whether M is a metric emitted over time or an attribute declared on a resource is a genuine fork with different conventions on each side, and it is the heart of Section 4.
+
+**Semantic conventions standardise measurable signals, not derived scores.** OpenTelemetry conventions describe things that are directly measured or observed. A composite value like the SCI score, calculated from other quantities, sits awkwardly in that model. The established preference is to standardise the measurable components (energy, intensity, embodied carbon, the functional unit) and to document how the score is computed over them, leaving tools and backends to derive it. Whether SCI should nonetheless be represented as a signal in its own right is a genuine open question for the Assembly, not a settled matter. Section 5 addresses it directly.
+
+**Attributes and requirement levels.** Attributes are the key-value pairs that qualify a signal (region, boundary, method). Each attribute in a convention is assigned a requirement level: Required (always present), Recommended (present unless there is a reason not to), or Opt-In (off by default, enabled deliberately). The rules are strict and consequential. Only information that is essential and always available can be Required. Anything sensitive, expensive to collect, or high-cardinality must be Opt-In, because high-cardinality attributes multiply storage and cost in a backend. Carbon-intensity provenance and fine-grained boundary identifiers are likely Opt-In for this reason. Requirement-level direction is therefore a blueprint decision, not a drafting detail.
+
+**Stability and ownership.** Every new convention starts at `development` stability, the signal that it may still change, and must declare it. It is written as YAML in the semantic-conventions registry, and it must have codeowners: named people responsible for maintaining it. There is no anonymous convention. OpenTelemetry also strongly recommends prototyping a convention against real telemetry before proposing it, to prove it is collectable, which is why feasibility evidence gathered during the Assembly has direct downstream value.
+
+**The hardware conventions, in detail.** These are the most important existing conventions for this work, because energy already has a home. They define `hw.energy` as a Counter in joules and `hw.power` as a Gauge in watts, with `hw.host.energy` and `hw.host.power` for the whole physical host, and they explicitly recommend reporting energy in preference to power. Component identity is carried on `hw.*` attributes such as `hw.id` and `hw.type`; the identity of the host itself lives on resource attributes, not on the metric. This is the concrete pattern reuse-first points at: E should almost certainly build on this, plus `system.*`, `k8s.*`, `container.*` and `cloud.region`, rather than invent a parallel energy vocabulary.
+
+**Units and namespace.** OpenTelemetry metric units follow UCUM, the Unified Code for Units of Measure. Energy fits cleanly: joules, as the hardware conventions already use. Carbon does not: gCO2e is not a UCUM unit, so how carbon quantities are expressed is a decision the Assembly must make rather than inherit. Naming is the same kind of choice: conventions live under a dotted namespace (the hardware conventions under `hw.*`), and where carbon conventions should live, for example `carbon.*` or `sustainability.*`, is an early decision that shapes everything named after it. Both are Section 2 questions.
+
+**The strategic point: precedent carries unusual weight.** OpenTelemetry's own authoring guidance for defining new metrics is currently marked "to be determined." In the absence of settled guidance, existing conventions become the de facto template, and the hardware conventions are the closest and most authoritative precedent for this domain. This is why reuse-first is a necessity here, not a stylistic preference: departing from the established pattern means arguing against the only precedent the SIG has, with no written guidance to appeal to. The burden of proof sits with anything that duplicates or diverges from what already exists.
+
+**How a proposal reaches OpenTelemetry.** New conventions are proposed to the Semantic Conventions SIG, reviewed in the open, and need a sponsoring approver from within the SIG to progress. A domain-specific area can be developed as its own convention set with its own codeowners inside the OpenTelemetry organisation, as the GenAI semantic conventions are; the same shape is available to carbon. The SIG engages iteratively and favours incremental proposals over large drops.
+
+**Fixed versus open, for the sections.** Fixed by OpenTelemetry: the signal types available, the requirement-level rules, `development` stability and codeowners for anything new, and the reuse-first acceptance criterion. Open for the Assembly: which signal each SCI component becomes, whether the composite score is represented at all or only computed, which existing conventions are reused and where, the namespace and units, the requirement level and cardinality direction of each attribute, and how the whole composes. A question that appears to ask how OpenTelemetry works is really asking how SCI should be expressed within these rules.
