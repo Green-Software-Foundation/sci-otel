@@ -10,8 +10,7 @@ Everything you need to take part lives here. If a question comes up later, check
 > - You will take part by replying to structured emails.
 > - Each section has three phases: **Discover, Deliberate, Decide**.
 > - Most active weeks need **30 to 45 minutes**.
-> - **Discover responses are private.**
-> - **Your Discover response is required** if you want to take part in that section’s Deliberate and Decide rounds.
+> - **Your responses are private,** only anonymised synthesis is shared back.
 > - **Decide rounds are binding.** If you do not reply before the deadline, we record that as consent.
 > - If you object, say what would need to change.
 > - Keep this page as your reference.
@@ -125,7 +124,7 @@ GSF will carry those draft conventions to the OpenTelemetry Semantic Conventions
 Plan for **30 to 45 minutes in an active week**, though some weeks are lighter. We would rather give you an honest estimate now than have the workload surprise you later.
 
 | Phase | What you do | Typical time |
-|---|---|---|
+|---|---|---:|
 | Discover | Answer open questions privately | 20–30 min |
 | Deliberate | Rate and comment on candidate positions | 30–45 min |
 | Decide | Endorse, consent, or object | 10–20 min |
@@ -148,7 +147,7 @@ This Assembly works because a small group of people each do a small amount, reli
 - **Nothing you say is wasted.** Every response is acknowledged, and every synthesis opens by showing what changed because of the group’s input.
 - **A predictable rhythm.** Clear windows, Anywhere on Earth deadlines, synthesis after each round closes, and a reminder before anything is due.
 - **Genuine neutrality.** The facilitator runs the process and never takes a side on the substance. The decisions are yours; the facilitation ensures everyone gets a fair hearing and no one gets deadlocked.
-- **Your candour protected.** Discover responses are private, and nothing is ever published outside the Assembly with your name against it. What is shared within the group stays within the group unless we all agree otherwise.
+- **Your candour protected.** Your responses are private, and nothing is ever published outside the Assembly with your name against it. What is shared within the group stays within the group unless we all agree otherwise. How we collect, use and protect your personal data is set out in full in the [Privacy Notice](https://github.com/Green-Software-Foundation/sci-otel/blob/main/assembly/PRIVACY.md).
 
 ### What consensus means here, and what it does not
 
@@ -215,7 +214,7 @@ This is where you open the space. Long, unpolished, thinking-out-loud answers ar
 
 Each round pairs its core questions with an optional deeper technical one, so you can go as far as your expertise takes you.
 
-Your Discover responses are private:
+Your responses are private:
 
 - Only an anonymised synthesis is ever shared back.
 - Your raw words are never shared with your name against them.
@@ -227,8 +226,6 @@ A practical tip: dictate your Discover responses. Speech-to-text captures rich r
 > **Your Discover response is your entry ticket.** If you do not take part in Discover, you cannot take part in Deliberate or Decide for that section. You rejoin at the next section. This protects everyone who put the work in from a last-minute block by someone who did not.
 
 ### Deliberate: react to the candidates
-
-Deliberate is the one phase that is a visible conversation. You will see who said what and respond to one another directly in the thread, because that is where real deliberation happens.
 
 You receive three candidate positions. You rate each one from 0 to 10 and comment on each.
 
@@ -318,6 +315,10 @@ For further definitions review the [Glossary](https://github.com/Green-Software-
 ## FAQ
 
 Common questions are answered on the dedicated [Frequently Asked Questions](https://github.com/Green-Software-Foundation/sci-otel/blob/main/assembly/FAQ.md) page.
+
+## Privacy
+
+How we handle your personal data during the Assembly, including AI processing and your rights, is set out in the [Privacy Notice](https://github.com/Green-Software-Foundation/sci-otel/blob/main/assembly/PRIVACY.md).
 
 ## Contacts
 
