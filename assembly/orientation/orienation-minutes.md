@@ -56,3 +56,14 @@ Each session included a short practical exercise to rehearse the consensus mecha
 - Discover Round 1 (Scope) questions are issued on Monday 27 July.
 
 The Assembly proceeds asynchronously from this point. Optional drop-in calls will be offered for connection alongside the written process.
+
+## Questions raised during orientation
+
+Participants raised a number of questions during the two sessions. Those about how the Assembly is run were answered at the time and, where they have lasting relevance, are captured in the FAQ. The questions below concern the substance of the work. They are recorded here and carried into the relevant rounds rather than answered now, as several are themselves matters for the Assembly to settle.
+
+- **The boundary between operational and embodied emissions.** How the embodied term (M) and the operational term (E) relate, given that software draws energy only through hardware, and how hardware is referenced within the operational term. This bears on Scope and on the energy section, and existing OpenTelemetry hardware metrics such as `hw.energy` were noted as relevant prior art.
+- **Reuse of existing cloud-native tooling.** Whether adoption or prototyping of the proposed conventions by existing tooling, such as Kepler, is an objective of the work. Maintainers of relevant tooling are among the participants.
+- **The form of the deliverable within OpenTelemetry.** Whether the output should take the form of a federated semantic-convention registry, with updates on stability and prototypes, in line with the direction of other recent semantic conventions. This was raised as an expectation from the OpenTelemetry community and is noted for the Assembly to consider.
+- **Engagement with the wider OpenTelemetry community.** Whether and how the Assembly's work is taken back to the OpenTelemetry community to build consensus beyond the Assembly itself.
+
+In addition, a request was made for the user journeys referenced during the session to be shared with participants.
