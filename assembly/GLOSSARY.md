@@ -27,3 +27,5 @@ Terms are grouped by originating domain.
 - **UCUM:** the unit code system OpenTelemetry uses for metric units. Relevant because gCO2e is not a UCUM unit, which is a decision the Assembly must make.
 - **Registry, codeowners, SIG:** the catalogue an attribute is registered in; the people responsible for a convention; and the Special Interest Group that governs semantic conventions.
 - **Instrumentation:** the code that actually emits the telemetry.
+- **Kepler:** an open-source tool that measures the energy consumption of workloads running on Kubernetes and exports it as metrics. Named here as an example of existing cloud-native energy tooling the conventions might build on.
+- **Federated semantic conventions:** an approach where conventions for a specific domain are maintained by that domain's own group within a shared registry, rather than centrally. Raised during orientation as one possible shape for the output; not a decision the Assembly has taken.
