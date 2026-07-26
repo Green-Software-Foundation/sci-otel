@@ -8,7 +8,7 @@ Everything you need to take part lives here. If a question comes up later, check
 > **In short**
 >
 > - You will take part by replying to structured emails.
-> - Each section has three phases: **Discover, Deliberate, Decide**.
+> - Each topic has three phases: **Discover, Deliberate, Decide**.
 > - Most active weeks need **30 to 45 minutes**.
 > - **Your responses are private,** only anonymised synthesis is shared back.
 > - **Decide rounds are binding.** If you do not reply before the deadline, we record that as consent.
@@ -43,8 +43,8 @@ Everything you need to take part lives here. If a question comes up later, check
 2. You receive the first Discover email.
 3. You reply before the deadline.
 4. We send a synthesis showing what changed because of the group’s input.
-5. The section moves to Deliberate, then Decide.
-6. Once a section closes, the next one begins.
+5. The topic moves to Deliberate, then Decide.
+6. Once a topic closes, the next one begins.
 
 ## Project and Assembly overview
 
@@ -109,14 +109,14 @@ GSF will carry those draft conventions to the OpenTelemetry Semantic Conventions
 
 - About **30 to 45 minutes of your time in an active week**.
 - **Everything by email**, answered in your own time within each response window.
-- **A series of sections**, each tracing one part of the SCI formula, run one at a time.
+- **A series of topics**, each tracing one part of the SCI formula, run one at a time.
 - **An orientation call** to open, offered in two time-zone slots.
 - **A handful of informal drop-ins**, which are optional and not used for decision-making.
 
 > [!WARNING]
 > **Two rules not to miss**
 >
-> - **Discover is required:** if you do not take part in Discover, you cannot take part in Deliberate or Decide for that section.
+> - **Discover is required:** if you do not take part in Discover, you cannot take part in Deliberate or Decide for that topic.
 > - **Silence is consent:** if you do not respond within a Decide window, we record that as consent.
 
 ## Time commitment
@@ -139,7 +139,7 @@ This Assembly works because a small group of people each do a small amount, reli
 - **Stay open past your own domain.** Nobody here spans the whole problem. Contribute where you are strong, and stay genuinely open where someone else is stronger.
 - **Respond within the window.** You do not need to answer everything, but a reliable reply each round keeps the process moving for everyone.
 - **Disagree constructively.** When you object, say what would need to change, ideally with alternative wording. A flat “no” without a route forward stalls the group; a well-argued objection moves it.
-- **Respect the phases.** When a section is open for exploration, explore. When it moves to a decision, decide. Once it closes, it stays closed. Reopening settled ground can unravel the work.
+- **Respect the phases.** When a topic is open for exploration, explore. When it moves to a decision, decide. Once it closes, it stays closed. Reopening settled ground can unravel the work.
 
 ### What you can expect from us
 
@@ -151,7 +151,7 @@ This Assembly works because a small group of people each do a small amount, reli
 
 ### What consensus means here, and what it does not
 
-A section is done when the group has settled every open decision within it and no objections remain unresolved.
+A topic is done when the group has settled every open decision within it and no objections remain unresolved.
 
 Consensus does not mean everyone is happy. It is not a guarantee that the conventions will turn out accurate or complete. Group agreement cannot promise that.
 
@@ -182,9 +182,9 @@ Our task is to take that formula apart and agree how each component, E, I, M and
 
 ### The shape of the work
 
-The Assembly is organised into a series of sections. Each runs in order, closes fully before the next opens, and does not reopen.
+The Assembly is organised into a series of topics. Each runs in order, closes fully before the next opens, and does not reopen.
 
-The final grouping of sections will be confirmed before the Assembly begins. The territory is fixed by the SCI formula, and the work will move through these areas:
+The final grouping of topics will be confirmed before the Assembly begins. The territory is fixed by the SCI formula, and the work will move through these areas:
 
 - **Scope and use cases** – who the telemetry serves, what decisions it enables, what is explicitly out of scope.
 - **Namespace and reuse** – where the conventions live, what we reuse from existing OpenTelemetry conventions, and how we express units.
@@ -192,9 +192,9 @@ The final grouping of sections will be confirmed before the Assembly begins. The
 - **Embodied carbon (M)** – how M is represented and allocated, treated honestly given thin data.
 - **Functional unit and composition (R)** – how R is expressed and how the whole SCI computation composes, tested with a worked example.
 
-### How a section works
+### How a topic works
 
-A section moves through three phases, always in this order:
+A topic moves through three phases, always in this order:
 
 1. **Discover:** private input on open questions.
 2. **Deliberate:** visible discussion of candidate positions.
@@ -204,7 +204,7 @@ Each phase is one kind of email, asking for one thing, with the time cost and th
 
 ![Assembly process](https://private-user-images.githubusercontent.com/69306070/618285119-dc37a9f6-cc5b-46c8-a874-2ae0f23b6aa9.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODM5NTQ0MzQsIm5iZiI6MTc4Mzk1NDEzNCwicGF0aCI6Ii82OTMwNjA3MC82MTgyODUxMTktZGMzN2E5ZjYtY2M1Yi00NmM4LWE4NzQtMmFlMGYyM2I2YWE5LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjA3MTMlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYwNzEzVDE0NDg1NFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTliOTU0YjAzMTIwZmI2N2ViYTMzZWNlOGIzZWJjNDUzZDMwZjIxYmQyNmYyMzg4YjcwYzY4MmY1OWRhZjFhOTAmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JnJlc3BvbnNlLWNvbnRlbnQtdHlwZT1pbWFnZSUyRnBuZyJ9.5RMCocBpEx0KVsnGFuRII5L1T4WRgQglOa0GFulOvEI)
 
-*Each section follows the same pattern: private input, visible deliberation, then a final decision.*
+*Each topic follows the same pattern: private input, visible deliberation, then a final decision.*
 
 ### Discover: open the questions
 
@@ -223,7 +223,7 @@ Your responses are private:
 A practical tip: dictate your Discover responses. Speech-to-text captures rich reasoning far better than typing tends to, and there is no need to tidy it up on our account.
 
 > [!IMPORTANT]
-> **Your Discover response is your entry ticket.** If you do not take part in Discover, you cannot take part in Deliberate or Decide for that section. You rejoin at the next section. This protects everyone who put the work in from a last-minute block by someone who did not.
+> **Your Discover response is your entry ticket.** If you do not take part in Discover, you cannot take part in Deliberate or Decide for that topic. You rejoin at the next topic. This protects everyone who put the work in from a last-minute block by someone who did not.
 
 ### Deliberate: react to the candidates
 
@@ -264,7 +264,7 @@ Attendance at a live resolution session is required for the objector and for som
 
 These sessions are recorded because they are part of the decision record.
 
-If objections still persist after three rounds, the outcome is chosen by a published fallback rule over all the votes cast. No single person can stall a section indefinitely.
+If objections still persist after three rounds, the outcome is chosen by a published fallback rule over all the votes cast. No single person can stall a topic indefinitely.
 
 ### The rhythm you can rely on
 
@@ -295,7 +295,7 @@ Substance stays in the written process so that nobody who missed the call loses 
 ## Recognition
 
 - **Named contributor credit** in the final report, opt-in. Positions are never attributed to you, but you are credited as a founding contributor to a prospective OpenTelemetry convention.
-- **A closing showcase** when the report publishes: an optional celebration where participants can present a section they helped settle.
+- **A closing showcase** when the report publishes: an optional celebration where participants can present a topic they helped settle.
 - **A review before submission.** Once the blueprint is rendered into draft conventions, you will be invited to review them to confirm they faithfully reflect what the group agreed, before they go to the SIG.
 
 ## Useful terms
