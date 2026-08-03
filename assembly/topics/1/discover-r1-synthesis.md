@@ -1,5 +1,4 @@
 # SCI for OpenTelemetry Assembly
-# Topic 1: Scope and Use Cases
 
 > **About this document**
 >
@@ -19,7 +18,7 @@
 > Individual responses are never published, and no synthesis identifies who said what.
 > Counts describe how many responses supported a point, not which participants.
 
-## Discover, Round 1
+## Topic 1: Scope and Use Cases - Discover, Round 1
 
 24 responses received, from 37 invited participants.
 
