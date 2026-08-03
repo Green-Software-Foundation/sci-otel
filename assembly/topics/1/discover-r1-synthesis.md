@@ -1,3 +1,4 @@
+# SCI for OpenTelemetry Assembly
 # Topic 1: Scope and Use Cases
 
 > **About this document**
