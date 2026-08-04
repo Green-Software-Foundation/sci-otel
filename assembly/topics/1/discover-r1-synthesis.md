@@ -62,18 +62,20 @@ Every response that named a consumer named at least one group beyond the enginee
 - **One response** put container-workload coverage first, serving platform teams.
 - **Four responses** gave no ranking, or framed the question differently.
 
-No single ordering holds a majority of all 24 responses, though the engineering-optimisation theme is the largest cluster. The clearest directional signal is at the other end: where a full ranking was given, sustainability or organisational reporting was placed last in nine responses.
+No single ordering holds a majority of all 24 responses, though the engineering-optimisation theme is the largest cluster. The clearest directional signal is at the other end: no response put sustainability or organisational reporting first, and where a full ranking was given it was placed last in nine responses.
 
 ### Should the conventions cover modelled, estimated, and defaulted values at all?
 
 - **Twenty-three responses** said yes, arguing that restricting to direct measurement would exclude most cloud and shared infrastructure.
-- **One response** argued for restricting the conventions to directly measured values, or values calculated from them.
+- **One response** argued for restricting the conventions to directly measured values, or values calculated from them, on the grounds that this is meant to be a metric and a metric should report what was observed.
 
 This is a genuine minority position and will be tested directly in the next phase rather than treated as settled by weight of numbers.
 
 ## Still open
 
-- **Boundary cases.** Nine responses flagged genuine uncertainty about embodied carbon at fine-grained attribution, mobile and web applications, firmware and embedded software, and shared or unobservable infrastructure such as content delivery networks, serverless platforms, and end-user devices. None settled where the line falls.
+- **Embodied carbon.** inside or alongside. Four responses raised the same unresolved question, framed two ways. Either embodied carbon is reported through these conventions like any other quantity, or it sits outside them as a separate, slowly changing figure that consumers combine with the operational telemetry themselves. ...The argument for the second framing is that embodied carbon does not change at the rate telemetry is emitted. Separately, uncertainty was flagged about how far embodied carbon can be attributed down to individual requests or spans. Neither question was settled.
+- **Shared and unobservable infrastructure.** Three responses flagged serverless platforms, content delivery networks, and end-user devices as cases where the consuming resource cannot be observed directly. None settled whether these fall inside scope.
+- **Software embedded in hardware.** Firmware and microcontroller code was raised as a question rather than answered: whether these conventions can cover it at all.
 - **Corporate-level accounting.** A smaller group proposed excluding corporate-level carbon accounting and Scope 1 to 3 reporting frameworks specifically. This has not yet been tested against the wider group.
 - **Broad and deep marking.** None of the 24 responses marked their use cases as broad or as deep, so that classification is still to be produced.
 
