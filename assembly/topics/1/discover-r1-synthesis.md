@@ -91,8 +91,3 @@ This is a genuine minority position and will be tested directly in the next phas
 - **Shared and unobservable infrastructure.** Serverless platforms, content delivery networks, and end-user devices were flagged as cases where the consuming resource cannot be observed directly. Mobile and web clients were raised as a separate boundary question.
 - **Software embedded in hardware.** Firmware and microcontroller code was raised as a question rather than answered: whether these conventions can cover it at all.
 - **Corporate-level accounting.** Four responses proposed excluding corporate-level carbon accounting, Scope 1 to 3 reporting frameworks, and non-software emissions such as travel and commuting.
-
----
-
-This covers the strongest signals only. The full record sits with the facilitator.
-Nothing here is decided, and the specifics get tested in the next phase.
