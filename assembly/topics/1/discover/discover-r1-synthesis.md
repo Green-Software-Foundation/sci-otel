@@ -14,80 +14,69 @@
 
 ## Topic 1: Scope and Use Cases - Discover, Round 1
 
-24 responses received, from 37 invited participants.
+This round received 24 responses from the 37 invited participants.
 
-## Where the group stands
+## Where the Group Stands
+
+The strongest theme is a gap in **attribution**, not measurement. Participants repeatedly described being unable to connect an energy or carbon number to a specific unit of software work: a request, transaction, release, component, or shared workload. The missing piece is a reliable way to say which part of a system a number belongs to, especially in serverless, containerized, multi-tenant, or cloud environments.
+
+Most participants who ranked use cases put engineering and operational decisions first: comparing implementations, catching regressions, and deciding where to optimize. Organizational or external sustainability reporting usually came later because it can tolerate coarser, delayed, or aggregated data. A smaller group prioritized cross-service comparison by cloud customers, or treating the conventions as a technical substrate for experts.
+
+There is near-unanimous agreement that the conventions must accept modelled, estimated, and defaulted values, not only directly measured ones. The condition is equally clear: each value needs metadata about where it came from, how it was produced, and how much it can be trusted. A number with no method, source, or confidence attached is unusable or misleading.
 
 The consumers named across the responses cluster into four groups:
-
 - **Engineering, platform, and SRE teams** who operate the systems being observed, and want to find and fix hotspots.
 - **Sustainability, ESG, and compliance teams**, along with **finance, FinOps, and leadership**, who want defensible numbers for reporting and investment decisions without operating the system themselves.
 - **Parties outside the organisation altogether**: customers, government procurement teams, vendors, and consultancies who want to compare suppliers or verify claims.
 - **Product managers and business owners**, who weigh feature value against footprint.
 
-One response named a consumer that fits none of these: an automated system that would act on the data directly, selecting a lower-carbon implementation without a person in the loop.
-
-The tension this creates is real.
-
+The tension this creates is real:
 - Teams that operate the system need granular, timely, attributable data.
 - Teams and outside parties that do not operate it need numbers that are comparable and stay meaningful once aggregated.
-- The conventions will need to satisfy both without one crowding out the other.
 
-**The most useful reframe of the round** came from a response describing container orchestration, CI/CD, build tools, and cross-team user journeys. 
-* The real gap was not missing sensors but the absence of a consistent way to tag a unit of work and re-aggregate it across containers, stages, and owners.
-* That shifts the design question from "how do we observe more precisely" to "how do we keep a unit of work identifiable as it crosses boundaries", which changes what the conventions need to prioritise early.
+## Early Agreement
 
-Several responses proposed specific metric names or measurement tools. Those belong to the Topics on naming and instrument selection, not this one.
+**The gap is attributing a value to a unit of software work**
+- Responses from very different domains independently described the same failure: a figure exists at host, account or provider level with no dependable way to say what share belongs to a given service, request or release.
+- Responses differ on which unit of work the attribution hangs from, which is what later Topics have to settle.
+- If this holds, the conventions are primarily an attribution mechanism, and any signal that cannot be tied back to identifiable software work is doing less than it appears to.
 
-## Early agreement
-
-**The conventions should represent quantities, not prescribe how to calculate them.**
-
+**The conventions should represent quantities, not how to calculate them**
 - Five responses independently drew this line, with no response arguing the other way.
 - Between them they would keep estimation models, calculation methodology, universal calculation models, prescriptive scores, and carbon accounting standards themselves outside these conventions.
 - If this holds, the conventions define what a value means and what metadata travels with it, and leave the derivation to the consumer.
 
-**Values that are modelled, estimated, or defaulted need to say so, and say how confident they are.**
-
+**Modelled, estimated, and defaulted values should be included**
+- 22 of 23 responses that addressed this said yes, arguing that restricting to direct measurement would exclude most cloud and shared infrastructure.
 - Almost every response that addressed modelled values asked for a field distinguishing measured from modelled, estimated, or defaulted, plus some indication of confidence or uncertainty, before they would trust a number.
 - If this holds, every reported value needs a companion field for provenance and confidence, not just the number itself.
 
-**Carbon and energy attach to a defined software entity, explicitly linked to the physical resource that consumed it.**
-
-- Eleven responses described this in comparable terms: a service, workload, container, or unit of work such as a request or span, with the boundary stated rather than assumed.
-- No response offered a competing concept. Which entities to enumerate is left to a later Topic.
-
-**The telemetry needs to serve more than the team producing it.**
-
+**The telemetry needs to serve more than the team producing it**
 - Almost every response that named a consumer named at least one group beyond the team emitting the data, most often sustainability, finance, or an external party.
-- This means the conventions cannot be designed only around what is convenient to instrument.
 
-## Where views split
+## Where Views Split
 
-### Which use case should the conventions be designed for first?
+**Which use case should the conventions be designed for first?**
+Engineering-facing optimisation is the largest group by a clear margin, but it's a grouping rather than a single shared use case: it spans hotspot detection, release-to-release regression comparison, per-action attribution, and resource management. Those responses agree on who the first consumer is more than on what that consumer does first.
 
-- **Fifteen responses** put engineering-facing optimisation first, serving teams that operate the system.
-- **Three responses** put cross-vendor or cross-hardware comparison first, serving customers and vendors.
-- **One response** put reporting the energy and carbon of an application or service first, serving whoever consumes the report.
-- **One response** put automated adaptation first, serving an automated scheduling system.
-- **One response** put container-workload coverage first, serving platform teams.
-- **Three responses** gave no ranking, or framed the question differently.
+- Engineering-facing optimisation, serving teams that operate the system
+- Cross-vendor or cross-hardware comparison, serving customers and vendors
+- Reporting the energy and carbon of an application or service, serving whoever consumes the report
+- Automated adaptation, serving an automated scheduling system
+- Container-workload coverage, serving platform teams
+- Sustainability or organisational reporting was placed last in nine responses. No response placed it first.
 
-Engineering-facing optimisation is the largest group by a clear margin, but it is a grouping rather than a single shared use case: it spans hotspot detection, release-to-release regression comparison, per-action attribution, and resource management. Those responses agree on who the first consumer is more than on what that consumer does first.
+**Should any carbon or energy telemetry be emitted by default, or should all of it be opt-in?**
+Most responses addressing defaults: a small always-on baseline such as a coarse energy figure, workload identity, resource usage or a correlation identifier, with richer data opt-in, producing conventions with a defined minimum emitted without configuration.
 
-The sharper signal is at the other end of the rankings. **Where a full ranking was given, sustainability or organisational reporting was placed last in nine responses.** No response placed it first.
+One response: all carbon data opt-in with no default baseline, producing conventions that define only what is available when deliberately enabled and leave ecosystem-wide visibility at zero by default.
 
-### Should the conventions cover modelled, estimated, and defaulted values at all?
+## Still Open
 
-- **Twenty-two** of the twenty-three responses that addressed this said yes, arguing that restricting to direct measurement would exclude most cloud and shared infrastructure.
-- **One response** argued for restricting the conventions to directly measured values, or values calculated from them, on the grounds that this is meant to be a metric and a metric should report what was observed.
+**How should client-side, mobile, and end-user-device software be treated?**
+A few participants flagged uncertainty about whether device-side and end-user-facing software fit the same attribution model as server-side systems, while also noting that ignoring this half of the picture leaves a real share of software's footprint invisible.
 
-This is a genuine minority position and will be tested directly in the next phase.
+**At what granularity is embodied carbon credible?**
+Several responses raised it unprompted and were explicit that they had not resolved it; nobody argued it should be invisible. The unease was about allocating a slice of hardware manufacturing emissions to a single span or request, implying a precision the underlying manufacturing data does not support.
 
-## Still open
-
-- **Embodied carbon: inside or alongside.** Five responses raised this, framed two ways. Either embodied carbon is reported through these conventions like any other quantity, or it sits outside them as a separate, slowly changing figure that consumers combine with the operational telemetry themselves. The argument for the second framing is that embodied carbon does not change at the rate telemetry is emitted. Separately, uncertainty was flagged about how far embodied carbon can be attributed down to individual requests or spans.
-- **Default or opt-in.** Whether basic energy and carbon figures should be produced by default or require explicit opt-in split the group. Some want a coarse energy baseline on by default with fine detail opt-in. Others want carbon, and in some views energy too, switched on only when someone asks for it.
-- **Shared and unobservable infrastructure.** Serverless platforms, content delivery networks, and end-user devices were flagged as cases where the consuming resource cannot be observed directly. Mobile and web clients were raised as a separate boundary question.
-- **Software embedded in hardware.** Firmware and microcontroller code was raised as a question rather than answered: whether these conventions can cover it at all.
-- **Corporate-level accounting.** Four responses proposed excluding corporate-level carbon accounting, Scope 1 to 3 reporting frameworks, and non-software emissions such as travel and commuting.
+*This covers the strongest signals only. The full record sits with the facilitator. Nothing here is decided, and the specifics get tested in the next phase.*
