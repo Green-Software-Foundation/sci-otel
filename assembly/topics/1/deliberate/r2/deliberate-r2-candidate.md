@@ -22,10 +22,8 @@
 * Acts by placing or shifting the workload, or leaving it as-is.
 * Accepts that this is the direction to grow into, not a first-wave requirement, since live signals and cross-option methods are not yet reliable enough. A lightweight method and confidence marker still travels with the number.
 
-
-### Where these conflict
+### Conflict Resolution
 * Attribution and provenance prevail throughout: the engineer's need to trace a value to a stable entity holds even where an automated consumer would prefer a faster, lighter number.
-
 
 ### Rationale
 * **From the engineer-focused candidate**: the synthesis keeps entity-level attribution, the shipping/optimizing decision loop, and the hotspot-ranking use case. It incorporates the suggestion to broaden the first use case to architectural and dependency changes, and to soften "rolling back" to acknowledge that many organizations can only fix forward. It also drops the platform/SRE-specific framing in favor of "whoever is responsible for ranking."
