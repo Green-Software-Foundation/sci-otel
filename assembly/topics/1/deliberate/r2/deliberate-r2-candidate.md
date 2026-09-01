@@ -25,7 +25,7 @@
 ### Conflict Resolution
 * Attribution and provenance prevail throughout: the engineer's need to trace a value to a stable entity holds even where an automated consumer would prefer a faster, lighter number.
 
-### Rationale
+### How We Got Here
 * **From the engineer-focused candidate**: the synthesis keeps entity-level attribution, the shipping/optimizing decision loop, and the hotspot-ranking use case. It incorporates the suggestion to broaden the first use case to architectural and dependency changes, and to soften "rolling back" to acknowledge that many organizations can only fix forward. It also drops the platform/SRE-specific framing in favor of "whoever is responsible for ranking."
 * **From the comparison-focused candidate**: the synthesis keeps the requirement that energy and activity be reported over the same window, the denominator/unit-of-work fix requested independently by two participants, and the requirement that a value declare its own boundary and method. It adds an explicit rule that undeclared or mismatched values are treated as non-comparable rather than approximately equal.
 * **From the automation-focused candidate**: the synthesis keeps the recognition of an automated consumer and the value of real-time placement, but demotes it to a fourth, forward-looking priority. It reattaches a lightweight method and confidence marker rather than dropping provenance, per the strong and broad pushback against trading away traceability, and reframes "revert" as "place, shift, or leave as-is."
