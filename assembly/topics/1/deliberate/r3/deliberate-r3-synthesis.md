@@ -15,9 +15,7 @@ This round received ratings and comments from 17 participants.
 
 ## Where the Group Stands
 
-Ratings rose slightly compared to Round 2, and most feedback again refined specific wording rather than rejected the overall shape. Sixteen of the seventeen participants found this round's text acceptable, and fifteen rated it strongly.
-
-The one rating that stands out is also the one that matters most. It fell compared to last round, and not because of noise. It reflects an objection that is getting stronger, not weaker: whether cross-provider comparison belongs in these conventions at all.
+Ratings rose slightly compared to Round 2, and most feedback again refined specific wording rather than rejected the overall shape. Sixteen of the seventeen participants found this round's text acceptable, and fifteen rated it strongly. The one exception is covered below, since it's the one thing still standing between here and a decision.
 
 ## Early Agreement
 
@@ -27,10 +25,14 @@ The one rating that stands out is also the one that matters most. It fell compar
 - **A fast, automated signal must state what it is.** Measured, calculated, estimated, or forecast, rather than only listing what it might be missing.
 - **A result missing a required component must be labeled incomplete.** It cannot be presented as final if something like embodied carbon is absent.
 
-## Where Views Split
+## The Core Disagreement
 
-**Does cross-provider comparison belong in these conventions at all?**
-This is now the central open question. Three participants, up from one last round, have independently concluded that this use case cannot be satisfied by a semantic convention. One put it this way: "Comparability across providers requires a standardized workload and test procedure, something like the WLTP cycle for cars. A semantic convention specifies how telemetry is named and shaped, not how work is executed."
+Cross-provider comparison is the one open question left, and it is moving in one direction.
+
+- **Round 2:** one participant objected that this use case is out of scope for these conventions.
+- **Round 3:** three participants independently reached the same conclusion, for related but distinct reasons. One argues no semantic convention can substitute for a standardized workload procedure. Another argues the numbers being compared are vendor disclosures, not telemetry, since the person asking the question doesn't control what's being measured.
+
+The current text responds by narrowing the requirement to add nothing beyond what the first use case already asks for, rather than removing the use case. Whether that is enough, or whether it needs to be dropped and named as a non-goal instead, is what the next round needs to settle.
 
 ## Still Open
 
