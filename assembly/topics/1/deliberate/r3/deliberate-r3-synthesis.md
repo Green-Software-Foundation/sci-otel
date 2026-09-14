@@ -27,12 +27,12 @@ Ratings rose slightly compared to Round 2, and most feedback again refined speci
 
 ## The Core Disagreement
 
+**Does cross-provider comparison belong in these conventions at all?**
+
 Cross-provider comparison is the one open question left, and it is moving in one direction.
 
 - **Round 2:** one participant objected that this use case is out of scope for these conventions.
 - **Round 3:** three participants independently reached the same conclusion, for related but distinct reasons. One argues no semantic convention can substitute for a standardized workload procedure. Another argues the numbers being compared are vendor disclosures, not telemetry, since the person asking the question doesn't control what's being measured.
-
-The current text responds by narrowing the requirement to add nothing beyond what the first use case already asks for, rather than removing the use case. Whether that is enough, or whether it needs to be dropped and named as a non-goal instead, is what the next round needs to settle.
 
 ## Still Open
 
