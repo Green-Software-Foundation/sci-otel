@@ -1,4 +1,4 @@
-# Candidate F — Verify, Compare Honestly, Adapt Fast
+# Candidate F - Verify, Compare Honestly, Adapt Fast
 
 This candidate keeps the engineer or team able to act on their own system as the unconditional top priority, treating verification of whether a change reduced energy or emissions and identification of the responsible component as one continuous use case whose second half is never a precondition for the first. Cross-provider and cross-service comparison ranks second: a real use case these conventions can only partially serve, and whose limits this candidate states rather than hides. Automated real-time adaptation ranks third, trading resolution and directness of measurement for speed. No ranked use case is served by a value that fails to declare its own boundary, method, and unit of work — including whether operational, embodied, or both are covered — and that declaration is the floor beneath all three.
 
