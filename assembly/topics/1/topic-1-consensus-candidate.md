@@ -2,7 +2,7 @@
 
 ## Topic 1 - Scope & Use Cases
 
-> With zero objections in Decide consensus has been reached on this candidate.
+> With zero objections in Decide, consensus has been reached on this candidate.
 > 
 > This candidate received:  
 > - 10 Endorse votes  
