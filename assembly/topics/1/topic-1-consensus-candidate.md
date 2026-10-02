@@ -2,13 +2,14 @@
 
 ## Topic 1 - Scope & Use Cases
 
-> With zero objections in Decide, Round 1, consensus has been reached on this candidate.
+> With zero objections in Decide consensus has been reached on this candidate.
 > 
 > This candidate received:  
-> - 10 strong endorsements  
-> - 5 consent votes  
-> - 0 objections  
-> 
+> - 10 Endorse votes  
+> - 5 Consent votes
+> - 0 Objections  
+> - 22 silent consents
+>
 
 # Candidate F — Improve, Then Compare, Then Adapt
 
