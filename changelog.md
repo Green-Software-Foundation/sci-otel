@@ -1,22 +1,20 @@
 # Changelog
-All notable changes to this project will be documented in this file.
-The format is based on Keep a Changelog, and this project adheres to Semantic Versioning.
+
+All notable changes to this project are documented in this file.
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
+This project is pre-draft and does not yet use versioned releases, so entries are grouped by Assembly milestone.
 
 ## [Unreleased]
-### Changed
-- Update and improvement of Polish translation from .
-## [0.0.2] - 2014-06-09
 
 ### Added
-- Better explanation of the difference between the file ("CHANGELOG") and its function "the change log".
+- Topic 1 (Scope and Use Cases) complete. Consensus reached in Decide, Round 1 with 10 Endorse, 5 Consent, 0 Object and 22 silent consents. The approved text is [Candidate F, Improve, Then Compare, Then Adapt](assembly/topics/1/topic-1-consensus-candidate.md), with the [Decide synthesis](assembly/topics/1/decide/r1/decide-r1-synthesis.md) recording who voted.
+- Topic 1 Discover (Round 1), Deliberate (Rounds 1 to 3) and Decide (Round 1) syntheses and candidates under `assembly/topics/1/`.
+- Assembly glossary terms from Topic 1: software boundary, method, unit of work, nature of a value, declaration floor, consensus candidate, ranked use cases, carried forward.
+
 ### Changed
-- Refer to a "change log" instead of a "CHANGELOG" throughout the site to differentiate between the file and the purpose of the file — the logging of changes.
-### Removed
-- Remove empty sections from CHANGELOG, they occupy too much space and create too much noise in the file. People will have to assume that the missing sections were intentionally left out because they contained no notable changes.
-## 0.0.1 - 2014-05-31
-### Added
-- This CHANGELOG file to hopefully serve as an evolving example of a standardized open source project CHANGELOG.
-- CNAME file to enable GitHub Pages custom domain
-- README now contains answers to common questions about CHANGELOGs
-- Good examples and basic guidelines, including proper date formatting.
-- Counter-examples: "What makes unicorns cry?"
+- `assembly/assembly-document.md` now records Topic status and routes the questions carried forward from Topic 1 into Topics 2, 3 and 5.
+
+## Earlier
+
+- Assembly orientation, participant handbook, research note, FAQ, privacy notice and the Assembly document (version 1.0.0).
+- Repository created under Apache License 2.0.

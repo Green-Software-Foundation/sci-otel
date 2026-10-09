@@ -72,9 +72,23 @@ Consensus text targets are sized by the number of distinct decisions each Topic 
 > Throughout these Topic definitions, "the conventions" means the semantic conventions that will be written from this blueprint. Each Topic settles decisions about them. No Topic produces them.
 > 
 
+**Status**
+
+| Topic | Status |
+|---|---|
+| 1. Scope and Use Cases | **Complete.** Consensus reached in Decide, Round 1: 10 Endorse, 5 Consent, 0 Object, 22 silent consents. See [the consensus candidate](topics/1/topic-1-consensus-candidate.md) and [the Decide synthesis](topics/1/decide/r1/decide-r1-synthesis.md). |
+| 2. Namespace and Reuse Strategy | Next |
+| 3. Operational Emissions (E and I) | Not started |
+| 4. Embodied Carbon (M) | Not started |
+| 5. Functional Unit and Composition (R and the SCI computation) | Not started |
+
+The Decide synthesis for each Topic names the participants who voted in the final Decide round. This is intentional and is the one place attribution is published. Discover and Deliberate responses remain anonymised.
+
 ---
 
 ### 1. Scope and Use Cases
+
+**Status:** Complete. Consensus candidate: [Candidate F, Improve, Then Compare, Then Adapt](topics/1/topic-1-consensus-candidate.md).
 
 **Depends on:** none
 
@@ -110,6 +124,9 @@ Consensus text targets are sized by the number of distinct decisions each Topic 
 - **Why this matters:** Naming is the first thing a SIG reviewer reads, and a namespace root shapes every attribute named after it. It is also the cheapest decision to make now and the most expensive to change after adoption.
 - **Connection to other Topics:** Inherits the scope and reuse boundary from Topic 1. Every attribute named in Topics 3 to 5 sits in the namespace settled here, and the units decision is applied throughout.
 - **Drafting input produced:** The registry location for every attribute, the list of attributes referenced rather than defined, and the units line of every metric definition, including the deliberated answer to gCO2e not being a UCUM unit.
+- **Carried forward from Topic 1:**
+    - Naming of the SCI functional unit. "Unit of work" already means a span in OpenTelemetry traces, and "unit" means the unit of measurement in OpenTelemetry metrics. Resolve this when the resource-identity attributes are settled.
+    - Candidate F requires every value to declare its boundary, method, unit of work and nature. Naming these declarations is a Topic 2 decision.
 
 ---
 
@@ -126,6 +143,13 @@ Consensus text targets are sized by the number of distinct decisions each Topic 
 - **Why this matters:** This is where the roster's deep energy measurement expertise sits, and where the most working implementations already exist. It is also the largest single block of the specification a writer will draft.
 - **Connection to other Topics:** Names things per Topic 2 and attaches to the boundary anchored in Topic 1. Topic 4 apportions embodied carbon to the same boundary. Topic 5 composes E and I with M into the SCI computation.
 - **Drafting input produced:** Metric definitions and attribute sets for the E and I signals: instrument types, units, boundary levels, requirement-level direction, cardinality expectations per attribute, and collection-feasibility evidence serving the prototyping validation OpenTelemetry recommends.
+- **Carried forward from Topic 1:**
+    - Exact definitions of boundary, method, unit of work, and the difference between measured, calculated, estimated and forecast values, so signals are interpreted consistently across implementations.
+    - Whether estimated values need a confidence indicator.
+    - Whether an estimated component value must reconcile with a measured parent.
+    - Which data should flow without configuration.
+    - Whether use case 3 (automated placement) needs a lower-latency signal at all, given that scheduling ahead of time must rely on an estimate in any case.
+    - Whether the conventions reach client-side, embedded or build-time software.
 
 ---
 
@@ -158,6 +182,9 @@ Consensus text targets are sized by the number of distinct decisions each Topic 
 - **Why this matters:** The functional unit turns accumulated totals into a rate, which is what makes SCI a rate rather than a sum, so R and composition are the same deliberation. The worked example is the blueprint's own integration test: it exposes composition gaps before the SIG does.
 - **Connection to other Topics:** The capstone. Consumes Topics 1 to 4 and tests the blueprint against the use cases ranked in Topic 1.
 - **Drafting input produced:** The normative computation documentation, any remaining shared attributes, and the coherence proof supplied by the worked example.
+- **Carried forward from Topic 1:**
+    - The worked example is tested against the use cases ranked in Topic 1: engineer or team improving their own system first, cross-provider comparison second, automated adaptation third.
+    - Where vendors, consultancies, researchers and benchmarkers sit in the ranking.
 
 ---
 
