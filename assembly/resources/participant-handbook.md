@@ -187,7 +187,7 @@ The Assembly is organised into a series of topics. Each runs in order, closes fu
 The final grouping of topics will be confirmed before the Assembly begins. The territory is fixed by the SCI formula, and the work will move through these areas:
 
 - **Scope and use cases** – who the telemetry serves, what decisions it enables, what is explicitly out of scope.
-- **Namespace and reuse** – where the conventions live, what we reuse from existing OpenTelemetry conventions, and how we express units.
+- **What Every Value Declares** – where the conventions live, what we reuse from existing OpenTelemetry conventions, and how we express units.
 - **Operational emissions (E and I)** – energy and carbon intensity: instruments, boundaries, provenance, method disclosure.
 - **Embodied carbon (M)** – how M is represented and allocated, treated honestly given thin data.
 - **Functional unit and composition (R)** – how R is expressed and how the whole SCI computation composes, tested with a worked example.

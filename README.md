@@ -6,7 +6,7 @@ Software Carbon Intensity (SCI) measurements have no shared semantic conventions
 
 > **Status: Pre-Draft.** This project is in its initial development phase. The semantic conventions described here are not yet drafted or ratified. Nothing in this repository should be treated as stable.
 >
-> **Assembly progress:** Topic 1 (Scope and Use Cases) is complete. See the [consensus candidate](assembly/topics/1/topic-1-consensus-candidate.md). Topic 2 (Namespace and Reuse Strategy) is next.
+> **Assembly progress:** Topic 1 (Scope and Use Cases) is complete. See the [consensus candidate](assembly/topics/1/topic-1-consensus-candidate.md). Topic 2 (What Every Value Declares) is next.
 
 ## Overview
 
