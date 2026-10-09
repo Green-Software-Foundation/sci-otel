@@ -48,3 +48,14 @@ Terms are grouped by originating domain.
 - **Silence-is-consent:** the rule that a non-response inside a Decide window is recorded as consent. There is no abstention.
 - **Objection:** a formal block in Decide. Triggers discussion, a revised candidate, and a further Decide round. Objectors commit to helping resolve the objection.
 - **Synthesis:** the anonymised write-up shared back after a round closes, opening with what changed because of the group's input.
+- **Consensus candidate:** the candidate statement that reached consensus in Decide and became the Topic's approved text. Topic 1's is Candidate F.
+- **Ranked use cases:** the Topic 1 decision on who the telemetry serves and in what priority order. The order is the decision, not the list. When use cases conflict, the higher-ranked one prevails.
+- **Carried forward:** a question a Topic could not settle and has handed to the later Topic that owns it.
+
+## **From Topic 1 (Scope and Use Cases)**
+
+- **Software boundary:** what a carbon or energy value attaches to in an instrumented system, including whether operational emissions, embodied emissions, or both are covered. Every value must declare its own.
+- **Method:** how a value was obtained. Every value must declare it.
+- **Unit of work:** the explicit unit of useful work a value is aligned to, which is SCI's functional unit (R). Not the same as a span in OpenTelemetry traces. The naming is to be resolved in Topic 2.
+- **Nature of a value:** whether a value is measured, calculated, estimated, or forecast. A fast, modelled or partial value must be labelled as such rather than presented as equivalent to a fully attributed one.
+- **Declaration floor:** the Topic 1 requirement that any value covered by the conventions must state its own boundary, method, unit of work and nature before any ranked use case can rely on it.

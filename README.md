@@ -5,6 +5,8 @@
 Software Carbon Intensity (SCI) measurements have no shared semantic conventions in OpenTelemetry today. This project starts by drafting conventions covering energy consumption, carbon intensity, embodied carbon, and the functional unit, then builds the instrumentation that puts them into practice — so every observability stack can emit and consume carbon data consistently.
 
 > **Status: Pre-Draft.** This project is in its initial development phase. The semantic conventions described here are not yet drafted or ratified. Nothing in this repository should be treated as stable.
+>
+> **Assembly progress:** Topic 1 (Scope and Use Cases) is complete. See the [consensus candidate](assembly/topics/1/topic-1-consensus-candidate.md). Topic 2 (Namespace and Reuse Strategy) is next.
 
 ## Overview
 
