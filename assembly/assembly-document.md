@@ -16,7 +16,7 @@ max_decide_rounds: 3
 
 ## Deliverable
 
-**What the Assembly produces.** `REPORT.md`, the blueprint: the agreed framework from which OpenTelemetry semantic conventions representing the Software Carbon Intensity specification (ISO/IEC 21031:2024) can subsequently be written. It is consensus prose plus supporting artefacts, covering scope and use cases, namespace and reuse strategy, operational emissions, embodied carbon, and functional unit and composition. Published in the Green Software Foundation's `sci-otel` repository, accompanied by vote records, anonymised synthesis history, documented known-unknowns, and cryptographic inclusion proofs.
+**What the Assembly produces.** `REPORT.md`, the blueprint: the agreed framework from which OpenTelemetry semantic conventions representing the Software Carbon Intensity specification (ISO/IEC 21031:2024) can subsequently be written. It is consensus prose plus supporting artefacts, covering scope and use cases, What Every Value Declares, operational emissions, embodied carbon, and functional unit and composition. Published in the Green Software Foundation's `sci-otel` repository, accompanied by vote records, anonymised synthesis history, documented known-unknowns, and cryptographic inclusion proofs.
 
 **What the Assembly does not produce.** The semantic conventions. `REPORT.md` is not a specification and carries no YAML, registry entries, or normative convention text. Rendering the blueprint into draft conventions is a separate piece of work that happens after the Assembly closes. Those drafts go to the OpenTelemetry General Semantic Conventions SIG, which runs its own governance over whatever eventually exists upstream. Participants review the rendering for fidelity to the blueprint before submission; they do not author it.
 
@@ -77,7 +77,7 @@ Consensus text targets are sized by the number of distinct decisions each Topic 
 | Topic | Status |
 |---|---|
 | 1. Scope and Use Cases | **Complete.** Consensus reached in Decide, Round 1: 10 Endorse, 5 Consent, 0 Object, 22 silent consents. See [the consensus candidate](topics/1/topic-1-consensus-candidate.md) and [the Decide synthesis](topics/1/decide/r1/decide-r1-synthesis.md). |
-| 2. Namespace and Reuse Strategy | Next |
+| 2. What Every Value Declares | Next |
 | 3. Operational Emissions (E and I) | Not started |
 | 4. Embodied Carbon (M) | Not started |
 | 5. Functional Unit and Composition (R and the SCI computation) | Not started |
@@ -111,7 +111,7 @@ The Decide synthesis for each Topic names the participants who voted in the fina
 
 ---
 
-### 2. Namespace and Reuse Strategy
+### 2. What Every Value Declares
 
 **Depends on:** Topic 1
 
