@@ -4,7 +4,7 @@
 
 Establish what every value these conventions carry must state about itself. Topic 1 made this declaration the precondition for every ranked use case. The SCI specification makes it the first three steps of its procedure: Bound, Scale and Define. Topics 3 and 4 attach energy, carbon intensity and embodied carbon to the declaration settled here, so this Topic produces the shared contract every later signal must meet.
 
-This Topic decides three things: what makes two values about the same software, what work a value is measured against, and how a value says it was produced. It decides what each states, not how OpenTelemetry carries it. Where each declaration sits in OpenTelemetry's data model follows from whether it can vary between values of the same software, and is drafted from that answer. Attribute keys, final requirement levels and any new entity definitions are settled later through OpenTelemetry's own review.
+This Topic decides three things: what makes two values about the same software, what work a value is measured against, and how a value says it was produced. It decides what each states, not how OpenTelemetry carries it. Where each declaration sits in OpenTelemetry's data model follows from whether it is fixed for the software, changes with each release, or can differ between values, and is drafted from that answer. Attribute keys, final requirement levels and any new entity definitions are settled later through OpenTelemetry's own review.
 
 ## What the Topic must decide
 
@@ -43,13 +43,13 @@ Under each heading, three labeled fields:
 
 - **Declares:** what the decision states, naming any existing OpenTelemetry concept it builds on.
 - **Required on:** every value, or only where a named ranked use case needs it.
-- **Can vary between values of the same software:** yes or no.
+- **Varies:** fixed for the software, changes with each release, or can differ between values. Where an entry declares more than one thing, give the answer for each.
 
 The provenance entry adds a fourth field, **Distinguishes**, defining each of measured, calculated, estimated and forecast.
 
 Close with one concrete example: a single service compared before and after one release, showing what each decision states for that service, naming only existing OpenTelemetry attributes and no new attributes, metrics or units.
 
-Candidates do not state where a declaration sits in OpenTelemetry's data model. The "can vary" answer determines that.
+Candidates do not state where a declaration sits in OpenTelemetry's data model. The "Varies" answer determines that.
 
 ## Length
 
