@@ -55,3 +55,5 @@ If the unit is a request or a transaction, a change that removes unnecessary req
 Before the round, stating input data looked like a smaller, technical point next to software identity. It became the strongest agreement in the round. Only one response disagreed.
 
 Confidence went the opposite way. At first, it looked as if most responses wanted a confidence indicator. A closer count showed a different picture. The real question is who makes the judgment: the producer, or nobody. On that question the group is split almost exactly in half.
+
+*This covers the strongest signals only. The full record sits with the facilitator. Nothing here is decided, and the specifics get tested in the next phase.*
