@@ -2,13 +2,9 @@
 
 > **About this document**
 >
-> This is the anonymised synthesis of one Discover round of the SCI for OpenTelemetry
-> Assembly. Discover explores the problem space. **Nothing in this document is decided,
-> agreed, or endorsed by the Assembly**, and it is not a consensus position of the Green
-> Software Foundation or its members.
+> This is the anonymised synthesis of one Discover round of the SCI for OpenTelemetry Assembly. Discover explores the problem space. **Nothing in this document is decided, agreed, or endorsed by the Assembly**, and it is not a consensus position of the Green Software Foundation or its members.
 >
-> This synthesis selects the strongest signals rather than reporting everything;
-> the complete record is held by the facilitator and available if required.
+> This synthesis selects the strongest signals rather than reporting everything; the complete record is held by the facilitator and available if required.
 > Individual responses are never published, and no synthesis identifies who said what.
 > Counts describe how many responses supported a point.
 
@@ -18,66 +14,44 @@ This round received 15 responses from the 37 invited participants.
 
 ## Where the Group Stands
 
-The strongest theme is that a version string is not enough to say two values are about the same software, or that two numbers were produced the same way. Across SRE, MLOps, HPC, and Kubernetes contexts alike, responses independently described a version number, or even a source-control commit hash, failing to catch the cases that actually mattered: a rebuilt image changing its digest with no code change, configuration drifting independently of the build, or a tool's underlying input data changing without its version changing at all. The same underlying concern showed up as a request for an artifact-level identifier on the software side, and as a request for declared input data — a carbon-intensity source, a power model — on the method side.
+The clearest result of this round is simple. A version number alone is not enough. It does not prove that two values describe the same software. It also does not prove that two values were produced in the same way.
 
-There is also broad agreement that a count of work should exclude what isn't really work, such as health checks, retries, or failed requests, and that a value's nature should keep measured, calculated, estimated, and forecast distinct, even though the SCI formula itself only names two quantification methods.
+Many responses described the same problem. A value changed, but the version number did not show why. This came up in two places:
 
-The one place this round did not converge is confidence: whether a value should carry an indicator of how much to trust it, and if so, who produces that indicator.
+- **Software identity.** Responses asked for an identifier at the level of the built artifact, such as an image digest or checksum, not only a version number.
+- **Method.** Responses asked each value to state the source of its input data, such as its carbon intensity source or power model. The name and version of the tool are not enough. This was the strongest agreement in the round.
 
-The consumers named across the responses cluster into four groups:
-- **Engineers and SREs comparing their own releases**, the largest group, who want to know whether a specific change reduced energy or emissions for the same work.
-- **Engineers or decision-makers comparing across providers or suppliers**, who need a number that means the same thing regardless of who produced it.
-- **Automated schedulers or placement systems**, acting on a value to choose a lower-carbon option in real time.
-- **Operators who run the system day to day**, who some responses placed in charge of judging a value's trustworthiness rather than its producer.
-
-The tension this creates is real:
-- Engineers comparing their own releases need granularity and timeliness: which CPU, which configuration, which scrape interval.
-- Engineers and decision-makers comparing across providers need a number that is comparable across organisations, which is why they pushed hardest for declared carbon-intensity sources and power models rather than just a tool's name.
+The group did not agree on confidence. The question is who should judge how much a value can be trusted. About half the responses want the producer or operator to state it. The other half want no separate judgment. They prefer that trust comes from the facts the value already states.
 
 ## Early Agreement
 
-**A value should state the source of its inputs, not just its tool's name and version**
-- Eleven of fifteen responses said a tool's name and version are not enough to trust that two values were produced the same way, because the same tool and version can be configured with a different carbon-intensity source, power model, or dataset and produce a different number.
-- This was the most consistent reasoning in the round: a described failure where a number moved for reasons that had nothing to do with the software.
-- If this holds, every value needs to carry its input source, not only the identity of the tool or model that produced it.
-
-**Software identity needs an artifact-level marker below the version string**
-- Six responses independently concluded that a version number or commit hash isn't reliable on its own, since the same source can produce different binaries and a rebuilt image can change its digest with no code change.
-- No response argued the opposite; the rest either didn't address the question or used a weaker marker without defending it as sufficient.
-- If this holds, a release is identified by a build-level digest or checksum, with configuration and infrastructure tracked as separate, declared context.
-
-**A count of work should exclude what isn't really work**
-- Six responses said raw counts bring in health checks, retries, failed requests, or warm-up traffic, and that a count needs to state what it included and excluded.
-- No response argued these should be counted as real work.
-- If this holds, a release that fails fast or serves less cannot look efficient purely because its raw count fell.
-
-**Measured, calculated, estimated, and forecast should stay distinct, even though SCI only names two methods**
-- Nine responses gave matching definitions: measured as a direct instrument reading, calculated as a deterministic formula over measured inputs, estimated as substituting a modelled or assumed input for something not directly observed.
-- Several gave the same specific reason for keeping all four visible: collapsing calculated and estimated together hides a real difference in how much a number should be trusted.
-- If this holds, a value's nature is one of four labels, not a binary measured-or-not flag, even where SCI's own formula treats three of the four the same way.
+- **A value should state the source of its input data, not only the name and version of the tool.** The same tool and version can use a different carbon intensity source or power model. The result is then different, even when the software has not changed. Eleven of 15 responses supported this. They came from different settings, including HPC, cloud and Kubernetes.
+- **Software identity needs an identifier below the version number.** Six responses said a version number or commit hash is not reliable on its own. The same source code can produce different binaries. A rebuilt image can get a new digest with no code change. No response disagreed.
+- **A count of work should leave out activity that is not real work.** Six responses said raw counts include health checks, retries, failed requests or warm-up traffic. They said a count should state what it includes and what it leaves out. No response said these should count as work.
+- **Measured, calculated, estimated and forecast should stay four separate labels.** The SCI names only two methods: measurement and calculation. Even so, nine responses gave matching definitions of all four labels. They said that joining "calculated" and "estimated" hides a real difference in how far a value can be trusted.
 
 ## Where Views Split
 
-**Should a confidence indicator be assigned by whoever produced the value, or derived only from facts the value already declares?**
+**Who should judge how far a value can be trusted?**
+The responses split almost evenly. Six responses want the producer or the operator to give each value a confidence indicator. Examples were a simple scale, a percentage, or a certification with clear thresholds. Six other responses want either no confidence indicator, or one that is worked out only from facts the value already states, such as its nature and its input sources. They said a producer cannot reliably rate its own values, and a rating may give false certainty.
 
-This split is close to even, not a majority-minority question.
-
-- Six responses want a confidence indicator assigned directly by a producer, or in one case the system's operator — a simple scale, a percentage, or a certification process with defined thresholds.
-- Six responses want either no separate indicator at all, or one computed only from what the value already states about itself, such as its nature and the source of its inputs, arguing a self-assessed score can't be calibrated and risks creating false certainty.
-
-**Is a tool's name and version enough to trust two values were produced the same way?**
-
-Most responses addressing this said no: the source of the tool's inputs has to be declared too, since the same tool and version can be configured differently and still produce a different result.
-
-One response held that name and version are sufficient, on the basis that a tool should be treated as immutable, with any change in its behavior being the responsibility of whoever updates the tool to bump its version when that happens.
+**Is the name and version of a tool enough to show two values were produced in the same way?**
+Most responses said no, for the reason given above. One response said yes. In this view, a tool should never change without a new version. If its behavior changes, the people who maintain the tool are responsible for releasing a new version.
 
 ## Still Open
 
-**Can a value that can't be traced back to a specific release still count?**
-No response was asked, or answered, whether a value from an observer with no mapping back to the software's identity — a node agent with no workload metadata, for instance — can still serve the use case of comparing a baseline and a changed system, or what it would need to state about the identity it lacks.
+- **Can a value count if it cannot be linked to the software that produced it?** Some values come from an observer, such as a node agent, that cannot tell which release it was observing. No response said whether such a value can still be used to compare a system before and after a change.
+- **Should the kind of work be part of the count's unit, or a separate attribute?** No response answered this directly. The two options can conflict. An existing metric already has a fixed unit. If a value reuses that metric, its unit may have no room to say what was included or left out.
+- **Is a count of requests or transactions always the right unit?** Two responses raised this without settling it. One request can cost far more than another. In that case, a simple count can give a misleading comparison. Responses from fields where this is common, such as machine learning and high-performance computing, were not asked about it directly.
 
-**Does the kind of work belong inside the count's unit, or as a separate attribute?**
-No response addressed this directly, and it turns out the two choices can conflict: reusing an existing metric to count work means that metric's own unit is already fixed, which may leave nowhere to attach a declaration of what's included or excluded without a separate field.
+## Insight of the Round
 
-**Should functional units stay at request or transaction granularity, or move toward a weighted or outcome-level count?**
-A couple of responses raised, without resolving, that a request-level count can distort comparisons when one request's real cost varies by orders of magnitude from another, or that counting requests at all can reward architectures that reduce request volume without reducing real work. Domains where unit cost varies most widely didn't get a direct question on this.
+One response changed how the question of work can be seen. Most responses asked which existing counter to use. This response asked a different question: what effect does the choice of unit have on how engineers behave?
+
+If the unit is a request or a transaction, a change that removes unnecessary requests could look worse, even when users get the same result. The unit could then discourage the improvements the conventions are meant to support. This moves the question from "which metric do we reuse?" to "what does any fixed unit reward?"
+
+## What Surprised Us
+
+Before the round, stating input data looked like a smaller, technical point next to software identity. It became the strongest agreement in the round. Only one response disagreed.
+
+Confidence went the opposite way. At first, it looked as if most responses wanted a confidence indicator. A closer count showed a different picture. The real question is who makes the judgment: the producer, or nobody. On that question the group is split almost exactly in half.
