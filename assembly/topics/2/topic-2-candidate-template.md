@@ -1,50 +1,34 @@
-# SCI for OpenTelemetry Assembly
+# Candidate [Letter]: [Short plain-language title, 3 to 6 words]
 
-## Topic 2 - What Every Value Declares
+[The position in one sentence of 25 words or fewer. Name only the answers on which this candidate differs from at least one of the other two, and what it says on them. Never present an answer all three candidates share as a difference. It states the position, not the reasons for it. A participant should be able to read it once and say how this candidate differs.]
 
-## Candidate [Letter]: [Short title of at most 8 words naming the position this candidate takes]
+## How It Works
 
-[One paragraph stating the position this candidate takes across the three decisions, and the trade-off it makes. States, does not explain or argue.]
+[100 to 150 words in plain language, in the voice of the final Report ("A change is marked by...", not "This candidate proposes..."). First state the principle that connects this candidate's answers: what it treats as most important when a baseline and a changed system are compared. Then show that principle at work on one example: a single service compared before and after one release, including what each of its values would state and what the comparison could and could not conclude. Do not restate the table row by row; the table carries the answers. Name an existing OpenTelemetry attribute only where the example needs it. No material from later Topics.]
 
-[The three entries appear in whichever order the position turns on.]
+## What Every Value Declares
 
-### "Is this the same software, and what changed?"
-* **Declares:** [What establishes that two values are about the same software, naming the existing OpenTelemetry attributes it builds on, and whether comparison is anchored at the service alone or also at its namespace or deployment environment.]
-  * **Required on:** [Every value; every value where a stated condition holds, with the condition and what the value states when it does not; or only where a named ranked use case needs it.]
-  * **Varies:** [Fixed for the software; changes with each release or stated change; changes with the producer; or can differ between values.]
-* **Declares:** [What marks the change between a baseline and a changed system: a release, any new build, or a stated change event, naming the existing OpenTelemetry concept it builds on.]
-  * **Required on:** [As above.]
-  * **Varies:** [As above.]
-* **Declares:** [Whether the infrastructure the software ran on is visible on the value, and which existing OpenTelemetry attributes show it.]
-  * **Required on:** [As above.]
-  * **Varies:** [As above.]
-* **Declares:** [Where a value's producer cannot obtain the software's identity, whether that value can still serve the first-ranked use case, and what it states about the identity it lacks.]
-  * **Required on:** [As above.]
-  * **Varies:** [As above.]
+[Identical rows, in the same order, in all three candidates, so reviewers can compare answers row by row. Never drop a row. Each answer is the agreed text for that decision and must agree with How It Works. Name at most the one existing OpenTelemetry attribute the answer is anchored on: no attribute lists, filter values or edge cases. Where the Discover responses agree on an answer, every candidate gives it in the same words. Candidates differ only on rows where the responses disagree, and every disagreement the Discover synthesis records has each side taken by at least one candidate.]
 
-### "Per what?"
-* **Declares:** [Where a value's count of work comes from: existing metrics that already count work, a dedicated count, or both, naming any existing OpenTelemetry metric it builds on, and why where a dedicated count is added.]
-  * **Required on:** [As above.]
-  * **Varies:** [As above.]
-* **Declares:** [How the kind of work is declared: as part of the count's unit, as a separate attribute, or both.]
-  * **Required on:** [As above.]
-  * **Varies:** [As above.]
+[End every answer with its carriage in square brackets, in this form: who carries it, either "every value" or "when" followed by the condition; then what it changes with, one of "fixed for the software", "changes with each release or stated change", "changes with the producer" or "can differ between values". For example, a release marker carried on every value ends with the carriage "Every value; changes with each release or stated change" inside square brackets. Where an answer is "no", omit the carriage. A row's carriage must not contradict another row's answer: if a value can lack something another row allows to be absent, the carriage says when it is carried rather than "every value". Carriage does not count toward the word limit.]
 
-### "How was it produced?"
-* **Declares:** [The value's nature.]
-  * **Required on:** [As above.]
-  * **Varies:** [As above.]
-  * **Distinguishes:**
-    * **Measured:** [Definition an implementer can apply to a single value, and whether it falls under SCI measurement or calculation.]
-    * **Calculated:** [Definition, and which SCI method it falls under.]
-    * **Estimated:** [Definition, and which SCI method it falls under.]
-    * **Forecast:** [Definition, and which SCI method it falls under, or that it falls under neither.]
-* **Declares:** [What a value states about its method: name and version only, or also the source of its input data, and if so whether always or only for some natures, naming any existing OpenTelemetry concept it builds on.]
-  * **Required on:** [As above.]
-  * **Varies:** [As above.]
-* **Declares:** [Whether a confidence indicator is part of the declaration: yes or no.]
-  * **Required on:** [As above, or omitted where the answer is no.]
-  * **Varies:** [As above, or omitted where the answer is no.]
+| Decision | Answer |
+|---|---|
+| **Sameness: what identifies the software?** | [The identifying attribute comparison is anchored on, and whether the namespace or deployment environment is included. Up to 15 words.] |
+| **Sameness: what marks the change?** | [A release, any new build, a stated change event, or a combination, with the one attribute it is carried in. Up to 25 words.] |
+| **Sameness: is the infrastructure it ran on shown?** | [Yes or no, and if yes, what kind of infrastructure detail, without listing attributes. Up to 15 words.] |
+| **Sameness: what if the software's identity is unavailable?** | [Whether the value can still serve the first-ranked use case, and what it states instead. Up to 25 words.] |
+| **Functional unit: where does the count of work come from, and how is its kind declared?** | [Existing metrics, a dedicated count, or both, with the reason where a dedicated count is added; and whether the kind of work is in the count's unit, a separate attribute, or both. Up to 35 words.] |
+| **Provenance: what do measured, calculated, estimated and forecast mean?** | [One definition per nature, in that order, precise enough that two implementers would assign the same nature to the same value, each naming the SCI method it falls under, or that it falls under neither. Up to 70 words.] |
+| **Provenance: what does a value state about how it was produced?** | [Method name and version only, or also the source of its input data, and if so whether always or only in stated cases. Up to 25 words.] |
+| **Provenance: is there a confidence indicator?** | [Begin with Yes or No. Any indicator that appears on some values, such as an uncertainty bound present only when substantiated, is Yes. If yes, what it is and when it appears. Up to 20 words.] |
 
-### Example
-[One service compared before and after one release. For each of the three decisions, what that service's values state, naming only existing OpenTelemetry attributes and no new attributes, metrics or units.]
+## Trade-offs
+
+**Gains:** [One or two sentences on who this position works best for among engineers comparing releases, producers of energy and carbon values, automated consumers and the spec writer, and what it makes possible or easier that the other two candidates do not. Draw only on the answers where this candidate differs; never claim a benefit all three share.]
+
+**Gives up:** [One or two sentences on who bears the cost of this position and what it rules out, delays or makes harder compared with the other two candidates. Draw only on the answers where this candidate differs; never attribute to it a cost all three share. Include any effect on later Topics, for example how energy is joined to the count of work in Topic 3. Write it as a supporter of this candidate would describe its cost fairly. If this is hard to write, the candidate is not yet distinct enough from the other two.]
+
+## Where This Came From
+
+[Two sentences, with no attribution, linking this candidate to the Topic 2 Discover synthesis. The first names the theme or themes this candidate builds on, as the group expressed them, for example "Many participants..." or "A smaller group...". The second names a concern or disagreement raised in Discover that this candidate responds to, and how it responds. Use only themes that appear in the Discover synthesis. Describe the evidence, don't argue that the candidate follows from it.]
