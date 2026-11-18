@@ -2,7 +2,7 @@
 
 ## Topic 2 - What Every Value Declares
 
-## Candidate [Letter]: [Short title naming the position this candidate takes]
+## Candidate [Letter]: [Short title of at most 8 words naming the position this candidate takes]
 
 [One paragraph stating the position this candidate takes across the three decisions, and the trade-off it makes. States, does not explain or argue.]
 
